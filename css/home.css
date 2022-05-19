@@ -1,0 +1,144 @@
+/* 搬运自https://blog.csdn.net/qq_45448704/article/details/121595534 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'icomoon';
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fbe9e7;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translateX(50%);
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: #ff7b7c;
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-180deg);
+}
+
+.card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+	animation: anime1 1.2s;
+}
+
+.card .imgBox img:nth-child(2) {
+    transform: rotateY(180deg);
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .details .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .details .content h2 {
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.card .details .content h2 span {
+    color: #e21212;
+    font-size: 0.8em;
+}
+
+.card .details .content .social-icons {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+}
+
+.card .details .content .social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+	/* icon背景颜色 */
+    /* background-color: #333; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+/* 鼠标悬浮icon颜色 */
+/* .card .details .content .social-icons a:hover {
+    background-color: #e21212;
+} */
+
+.anime1{
+	animation: anime1 5s;
+}
+.anime2{
+	animation: anime2 5s;
+}
+
+/* 字体效果 */
+.hover{
+	background-image: linear-gradient();
+	transition: .3s,background-position 0s;
+	/* 控制蓝条长和宽度 */
+	width: 120%px;
+	height: 28px;
+	/* 控制蓝条div的内外边距和居中 */
+	margin: auto;
+	font-size: 20px;
+	text-align: center;
+}
+
+.hover:hover {
+	--p: 100%;
+	/* 鼠标触碰渐变色 */
+	color: #e21212;
+}
