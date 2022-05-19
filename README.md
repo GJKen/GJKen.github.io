@@ -1,1 +1,0 @@
-# GJKen.github.io
