@@ -1,60 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title></title>
-		<style type="text/css">
-			.all{
-				width:976px;
-				height:1600px;
-				background-color:#e9e9e9;
-				margin:0 auto;}
-			.p2{
-				width:606px;
-				padding:10px;
-				color:#939393;}
-			.p1{
-				width:0 auto;
-				height:800px;
-				color:#939393;}
-			.img1{
-				width:0 auto;
-				height:180px;}
-			.img2{
-				width:0 auto;
-				height:350px;}
-			.img3{
-				width:0 auto;
-				height:100px;}
-			.img4{margin-left:150px;
-				text-align:left;}
+		<link rel="stylesheet" href="./css/home.css">
+		<style>
+			@keyframes anime1{
+				/* 封面渐变 */
+				from{opacity: 0;}
+				to{opacity: #ff7b7c;}
+			}
+			@keyframes anime2{
+				/* 透明渐变 */
+				from{opacity: 0;}
+				to{opacity: 100;}
+			}
 		</style>
 	</head>
 	<body>
-		<div class="all">
-			<div>
-				<h1 align="center"><font face="黑体" color="939393">彼岸花&nbsp;<font size="3">偶安一隅 静静生活</font></font></h1>
-				<hr size="2" color="#dcdcdc" width="976px"/>
-				<p style="color:#939393;">商品分类&nbsp;></p>
-				<div align="center"><img src="banner.jpg"/></div>
-				<div class="p1" align="center">
-					<p>我喜欢一些花儿，静静的开放，从不声张，小小的花朵，有着一样的芬芳...</p>
-					<p>I like some flowers, open quietly, never make a sound, small flowers, with the same fragrance</p>
-					<div class="img1" align="center"><img src="bestseller1.png"/></div>
-					<div class="img2" align="center"><img src="bestseller2.jpg" width="600"/></div>
-				<div class="p2" align="left">
-					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多肉植物是指植物营养器官肥大的高等植物，<u>通常具根、茎、叶三种营养器官和花、果实、种子三种繁殖器官。</u> 在园艺上，又称内质植物或多花卉，但以多肉植物这个名称最为常用。
-					<br>
-					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全世界共有多肉植物一万余种，它们绝大部分分属于高等植物（绝大多数是被子植物）。在植物分类上隶属于几十个科。个别专家认为有67个科中含有多肉植物，但大多数专家认为只有50余科。</p>
-				</div>
-				<div>
-					<p><b>品质保障&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;七天无理由退货&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;特色服务体验&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;帮助中心</b></p>
-				</div>
-				<div class="img4">
-					<img src="tuxiang.gif" align="left" hspace="30">
-					<p>店主：Michael_唐僧</p>
-					<p>飞舞的花儿像一首诗？写着秋天的心事？带着相思？轻轻，轻轻？飘向大地？<br>也许这只是秋季里的一场游戏？</p>
-				</div>
+		<div class="card">
+			<div class="imgBox">
+				<!-- 封面图和内封面图 -->
+				<img src="img/avatar/封面.webp">
+				<img src="img/avatar/头像_香蕉君.webp">
+			</div>
+			<div class="details">
+				<div class="content">
+					<h2 class="hover">Life Is Happy<br><br></h2>
+					<div class="social-icons">
+						<a href="https://t.me/GJK_chat" target="_blank">
+							<svg id="invader" width="50" height="50" t="1652795800971" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="25683" width="200" height="200"><path d="M512 938.666667C276.352 938.666667 85.333333 747.648 85.333333 512S276.352 85.333333 512 85.333333s426.666667 191.018667 426.666667 426.666667-191.018667 426.666667-426.666667 426.666667z m-132.693333-376.746667l0.554666-0.298667 37.12 122.453334c4.778667 13.269333 11.349333 15.658667 19.328 14.549333 8.021333-1.066667 12.245333-5.376 17.493334-10.410667l50.688-48.981333 108.8 80.554667c19.882667 10.965333 34.176 5.290667 39.125333-18.432l70.698667-333.738667c7.808-31.061333-5.845333-43.52-29.952-33.621333l-415.274667 160.426666c-28.330667 11.349333-28.16 27.221333-5.12 34.261334l106.538667 33.28z" p-id="25684" fill="#1e98d4"></path></svg>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
