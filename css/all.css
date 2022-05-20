@@ -6,3 +6,6 @@
 	margin: 50px auto;
 	text-align: center;
 }
+.bg{
+	background: no-repeat center top url(../img/bg11.jpg), repeat-y center bottom url(../img/bg11_fix.jpg);
+}
