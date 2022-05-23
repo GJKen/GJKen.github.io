@@ -1,0 +1,26 @@
+* {padding::0; marging:0;}
+.all{
+	width: 474px;
+	height: 216px;
+	border:1px soild #e1e1e1;
+	margin: 50px auto;
+	text-align: center;
+}
+.header{
+	font-size: 18px;
+	font-family: '微软雅黑';
+	height: 40px;
+	line-height: 40px;
+	/* 下边框 */
+	border-bottom: 1px dashed #e1e1e1;
+}
+.text p{
+	font-size: 14px;
+	color: #ccc;
+	height: 24px;
+	line-height: 24px;
+}
+.images{
+	width: 10px;
+	height: 50px;
+}
