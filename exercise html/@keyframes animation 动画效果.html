@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			@keyframes anime1{
+				from{background:red;}
+				to{background:blue;}
+			}
+			@keyframes anime2{
+				from{opacity: 0;}
+				to{opacity: 100;}
+			}
+			@keyframes anime3{
+				0%{background:red;}
+				20%{background:green;}
+				40%{background:black;}
+				60%{background:blue;}
+				80%{background:blueviolet;}
+				100%{background:red;}
+			}
+			h1{
+				display: inline-block;
+				animation: anime1 2s;
+			}
+			.anime2{
+				animation: anime2 2s;
+			}
+			.anime3{
+				display: inline-block;
+				animation: anime3 5s infinite;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>红蓝渐变</h1>
+		<p class="anime2">透明渐变</p>
+		<div class="anime3">使用百分比控制动画<br>并添加循环(infinite)</div>
+	</body>
+</html>
