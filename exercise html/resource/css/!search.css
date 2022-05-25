@@ -9,11 +9,20 @@ body.dark {
 }
 
 p.tittle{
-	padding-top: 2%;
-	padding-bottom: 2%;
 	text-align: center;
-	color: black;
+	text-shadow: 2px 0 4px #a9a9a9;
+	font-weight: bold;
 	font-size: 25px;
+	padding-bottom: 10px;
+	color: #252525;
+}
+
+p.tittle2{
+	text-align: center;
+	text-shadow: 2px 0 4px #a9a9a9;
+	font: 20px;
+	display: block;
+	padding-bottom: 50px;
 }
 
 .box{
@@ -22,7 +31,8 @@ p.tittle{
 	border: green;
 	/* border:1px solid yellow; */
 	position: relative;
-	box-shadow: 0px 0px 20px black;
+	box-shadow: 0px 0px 10px black;
+	border-radius: 15px;
 }
 
 .hyperchain{
