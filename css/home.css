@@ -16,8 +16,8 @@ body {
 
 .card {
 	position: relative;
-	width: 300px;
-	height: 400px;
+	width: 450px;
+	height: 600px;
 	background-color: #fff;
 	transform-style: preserve-3d;
 	transform: perspective(1000px);
@@ -25,9 +25,8 @@ body {
 	transition: 1s;
 }
 
-.card:hover {
-	transform: translateX(50%);
-}
+/* 触碰卡片x轴偏移度 */
+.card:hover {transform: translateX(50%);}
 
 .card .imgBox {
 	position: relative;
@@ -74,30 +73,21 @@ body {
 }
 
 .card .details .content {
-	display: flex;
+	height: 100%;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-.card .details .content h2 {
-	text-align: center;
-	font-weight: 700;
-	line-height: 1em;
-}
-
-.card .details .content h2 span {
-	color: #e21212;
-	font-size: 0.8em;
-}
-
-.card .details .content .social-icons {
+.card .details .content .icons {
 	position: relative;
 	display: flex;
-	margin-top: 10px;
+	margin-top: 100%;
+	justify-content: center;
 }
 
-.card .details .content .social-icons a {
+.card .details .content .icons a {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
@@ -111,12 +101,28 @@ body {
 	font-size: 18px;
 	transition: 0.2s;
 }
+.card .details .content .icons svg{
+	width: 35px;
+	height: 35px;
+}
 
 /* 鼠标悬浮icon颜色 */
-/* .card .details .content .social-icons a:hover {
+/* .card .details .content .icons a:hover {
 	background-color: #e21212;
 } */
 
+.card .details .content p{
+	text-indent: 2em;
+}
+.card .details .content span{
+	opacity: 0;
+	transition: .18s;
+}
+.card .details .content span:hover{
+	opacity: 1;
+	color: palevioletred;
+	transition: .5s;
+}
 .anime1{
 	animation: anime1 5s;
 }
@@ -125,19 +131,18 @@ body {
 }
 
 /* 字体效果 */
-.hover{
+.h21{
 	background-image: linear-gradient();
 	transition: .3s,background-position 0s;
-	/* 控制蓝条长和宽度 */
+/* 	控制蓝条长和宽度
 	width: 120%px;
 	height: 28px;
-	/* 控制蓝条div的内外边距和居中 */
-	margin: auto;
+	控制蓝条div的内外边距和居中 */
 	font-size: 20px;
 	text-align: center;
 }
 
-.hover:hover {
+.h21:hover {
 	--p: 100%;
 	/* 鼠标触碰渐变色 */
 	color: #e21212;
