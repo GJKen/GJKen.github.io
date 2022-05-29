@@ -21,11 +21,12 @@ body {
 }
 
 /* 触碰卡片x轴偏移度 */
-.card:hover {transform: translateX(50%);}
+.card:hover {transform: translateX(0%);}
 
 .card .imgBox {
+	/* 封面 */
 	position: relative;
-	width: 100%;
+	width: 00%;
 	height: 100%;
 	z-index: 1;
 	transform-origin: left;
@@ -78,16 +79,12 @@ body {
 .card .details .content .icons {
 	position: relative;
 	display: flex;
-	margin-top: 100%;
 	justify-content: center;
 }
 
 .card .details .content .icons a {
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	/* icon背景颜色 */
-	/* background-color: #333; */
+	width: 36px;
+	height: 36px;
 	color: #fff;
 	display: flex;
 	justify-content: center;
@@ -99,8 +96,8 @@ body {
 
 /* svg图标长和宽 */
 .card .details .content .icons svg{
-	width: 35px;
-	height: 35px;
+	width: 36px;
+	height: 36px;
 }
 
 /* 鼠标悬浮icon颜色 */
@@ -108,7 +105,29 @@ body {
 	background-color: #e21212;
 } */
 
-.card .details .content p{text-indent: 2em;}
+/* dark组件 */
+.mode_switch{
+	display: flex;
+	align-items: center;
+}
+
+.mode_switch_toggle{
+	display: flex;
+	align-items: center;
+	width: 80px;
+	height: 35px;
+	border-radius: 100px;
+	background-color: black;
+}
+
+.mode_switch_circle{
+	width: 28px;
+	height: 28px;
+	border-radius: 120px;
+	background-color: yellow;
+}
+
+.card .details .content p{text-indent: 2em;margin-bottom: 420px;}
 
 /* 涩涩隐藏效果 */
 .card .details .content span{
