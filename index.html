@@ -2,57 +2,24 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>GJK's Web</title>
-		<meta name="description" content="网站仅用于学习交流使用">
-		<link rel="stylesheet" href="./css/home.css">
-		<style>
-			@keyframes anime1{
-				/* 封面渐变 */
-				from{opacity: 0;}
-				to{opacity: #ff7b7c;}
-			}
-			@keyframes anime2{
-				/* 透明渐变 */
-				from{opacity: 0;}
-				to{opacity: 100;}
-			}
-		</style>
+		<title>GJK web2</title>
+		<script src="js/svg-inject.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/icon.css">
 	</head>
 	<body>
 		<div class="card">
-			<div class="imgBox">
-				<!-- 封面图和内封面图 -->
-				<img src="img/avatar/封面.webp">
-				<img src="img/avatar/头像_香蕉君.webp">
+			<div id="icon">
+				<a href="https://t.me/GJK_chat" target="_blank" title="Telegram联系我">
+					<img id="tg" src="./icon/telegram-line.svg" onload="SVGInject(this)">
+				</a>
+				<a href="exercise html/!search.html" target="_blank" title="学习记录">
+					<img id="html" src="./icon/html5-line.svg" onload="SVGInject(this)">
+				</a>
 			</div>
-			<div class="details">
-				<div class="content">
-					<h2 class="tittle">Life Is Se Se</h2><br>
-					<p>一个被生活磨平了棱角的人, 磨掉了我的形状, 从一个形形色色的人, 变成了一个<span>涩涩</span>的人.</p>
-					<div class="icons">
-						<a class="a_1" href="https://t.me/GJK_chat" target="_blank" title="Telegram联系我">
-							<svg id="telegram-line" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M512 938.666667C276.352 938.666667 85.333333 747.648 85.333333 512S276.352 85.333333 512 85.333333s426.666667 191.018667 426.666667 426.666667-191.018667 426.666667-426.666667 426.666667z m-132.693333-376.746667l0.554666-0.298667 37.12 122.453334c4.778667 13.269333 11.349333 15.658667 19.328 14.549333 8.021333-1.066667 12.245333-5.376 17.493334-10.410667l50.688-48.981333 108.8 80.554667c19.882667 10.965333 34.176 5.290667 39.125333-18.432l70.698667-333.738667c7.808-31.061333-5.845333-43.52-29.952-33.621333l-415.274667 160.426666c-28.330667 11.349333-28.16 27.221333-5.12 34.261334l106.538667 33.28z" fill="#1e98d4"></path></svg>
-						</a>
-						<a href="" title="Night Mode">
-							<svg id="moon-clear-fill" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M419.072 95.488a384 384 0 0 0 509.44 509.44C886.101333 795.904 715.733333 938.666667 512 938.666667 276.352 938.666667 85.333333 747.648 85.333333 512c0-203.733333 142.762667-374.101333 333.738667-416.512z m355.925333 2.261333L810.666667 106.666667v42.666666l-35.669334 8.917334a85.333333 85.333333 0 0 0-62.08 62.08L704 256h-42.666667l-8.917333-35.669333a85.333333 85.333333 0 0 0-62.08-62.08L554.666667 149.333333v-42.666666l35.669333-8.917334A85.333333 85.333333 0 0 0 652.373333 35.669333L661.333333 0h42.666667l8.917333 35.669333a85.333333 85.333333 0 0 0 62.08 62.08z m213.333334 213.333334L1024 320v42.666667l-35.669333 8.917333a85.333333 85.333333 0 0 0-62.08 62.08L917.333333 469.333333h-42.666666l-8.917334-35.669333a85.333333 85.333333 0 0 0-62.08-62.08L768 362.666667v-42.666667l35.669333-8.917333a85.333333 85.333333 0 0 0 62.08-62.08L874.666667 213.333333h42.666666l8.917334 35.669334a85.333333 85.333333 0 0 0 62.08 62.08z" fill="#f4ea2a"></path></svg>
-						</a>
-						<a href="" title="Day Mode">
-							<svg id="sun-fill" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M512 768a256 256 0 1 1 0-512 256 256 0 0 1 0 512zM469.333333 42.666667h85.333334v128h-85.333334V42.666667z m0 810.666666h85.333334v128h-85.333334v-128zM149.973333 210.304l60.330667-60.330667L300.8 240.469333 240.469333 300.8 149.973333 210.346667zM723.2 783.530667l60.330667-60.330667 90.496 90.496-60.330667 60.330667-90.496-90.496z m90.496-633.6l60.330667 60.373333-90.496 90.496-60.330667-60.330667 90.496-90.496zM240.469333 723.2l60.330667 60.330667-90.496 90.496-60.330667-60.330667 90.496-90.496zM981.333333 469.333333v85.333334h-128v-85.333334h128zM170.666667 469.333333v85.333334H42.666667v-85.333334h128z" fill="#db311b"></path></svg>
-						</a>
-						</icon>
-						<!-- dark mode 组件div -->
-						<div class="mode_switch">
-							<div class="mode_switch_toggle">
-								<div class="mode_switch_circle">
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="content">
+				<h3 class="tittle">Life Is Se Se</h3>
+				<p>一个被生活磨平了棱角的人, 磨掉了我的形状, 从一个形形色色的人, 变成了一个(<span>涩涩</span>)的人.</p><br><br>
 			</div>
 		</div>
 	</body>

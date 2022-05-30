@@ -1,0 +1,14 @@
+#tg,#html{
+	width: 40px;
+	height: 40px;
+	bottom: 20px;
+}
+#tg:active,#html:active{
+	fill: peachpuff;
+}
+#tg{
+	fill: #1e98d4;
+}
+#html{
+	fill: #1ba035;
+}

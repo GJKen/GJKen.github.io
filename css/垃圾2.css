@@ -1,0 +1,17 @@
+*{
+	margin: 0;padding: 0;
+	box-sizing: inherit;
+}
+#left{
+	width: 40px;
+	height: 40px;
+	border: 1px red solid;
+	float: left;
+	/* display: inline-block; */
+}
+#right{
+	width: 40px;
+	height: 40px;
+	border: 1px red solid;
+	float: right;
+}
