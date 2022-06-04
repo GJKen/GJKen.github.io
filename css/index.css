@@ -7,7 +7,7 @@ body{
 	background: #fbe9e7;
 }
 
-.card{
+.nav{
 	width: 460px;
 	height: 280px;
 	margin: 25px;
@@ -19,7 +19,7 @@ body{
 	border-radius: 10px 10px 10px 10px;
 }
 /* 触碰卡片x轴偏移度 */
-.card:hover {transform: translateX(0%);}
+.nav:hover {transform: translateX(0%);}
 
 .content{
 	width: 369.4px;
