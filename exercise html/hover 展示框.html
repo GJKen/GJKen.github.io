@@ -17,7 +17,8 @@
 		.dropdown-show{
 			/* 如果定义了长和宽 则使用visibility隐藏元素 而display无法设置动画效果*/
 			visibility: hidden;
-			/* 定位 */
+			/* display: none; */
+			/* 元素位置 */
 			position: absolute;
 			top: 75px;
 			width: 138px;
@@ -29,10 +30,12 @@
 			opacity: 0;
 			transition: .2s;
 		}
+		/* hover后面跟着事件 */
 		.dropdown:hover .dropdown-show{
 			visibility: visible;
 			opacity: 1;
 		}
+		
 		/*指示箭头 正方形 取四分之一显示红色 */
 		.dropdown-show::after{
 			content: "";
