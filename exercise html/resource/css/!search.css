@@ -1,16 +1,12 @@
 *{padding: 0;margin: 0;}
 *::selection{
-	color: brown;
-	background-color: wheat;
+	color: beige;
+    background-color: black;
 }
 
 html,body{
 	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 	background: white;
-}
-
-body.dark {
-    background: #282c34;
 }
 
 .contents{
@@ -38,54 +34,23 @@ body.dark {
 .table_contents li a:hover{color: bisque;font-size: 23.5px;background: rgba(106,106,106, .9);}
 .table_contents li a:active{color: azure;transition: .4s}
 
-.tittle{
+#top{
 	text-align: center;
 	text-shadow: 2px 0 4px #a9a9a9;
-	font-weight: bold;
-	font-size: 25px;
-	padding-bottom: 10px;
 	color: #252525;
-}
-
-.tittle2{
-	text-align: center;
-	text-shadow: 2px 0 4px #a9a9a9;
-	font: 20px;
-	display: block;
-	padding-bottom: 50px;
+	padding: 10px 0 20px 0;
 }
 
 #fixed-btn{
 	position: fixed;
 	width: 40px;
-	height: 100px;
+	height: auto;
 	padding: 5px;
 	background: seashell;
 	right: 2%;
 	bottom: 5%;
 	box-shadow: 0px 0px 5px black;
 }
-.fixed-btn .top{
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	width: 40px;
-	height: 30%;
-	background: red;
-	border-bottom: black solid 1px;
-}
-.fixed-btn .top~a{
-	display: inline-block;
-	border: 1px solid white;
-}
-#to-top{
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-}
-
-#to-home{
-	display: inline-block;
-	width: 40px;
-	height: 40px;
+#fixed-btn a{
+	display: block;
 }
