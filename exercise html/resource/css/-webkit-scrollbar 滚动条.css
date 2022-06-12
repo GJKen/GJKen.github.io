@@ -13,7 +13,7 @@ body{
 /* 滚动条背景 */
 #table_contents::-webkit-scrollbar{
 	width: 10px;
-	height: 8px;
+	height: 20px;
 	background-color: navajowhite;
 }
 /* thumb 滚动条 */
