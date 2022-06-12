@@ -6,6 +6,6 @@ git init
 git add .
 git commit -m "%info%"
 git push
-set /p qr=是否打开git主页检查？(Y or N):
-SET qr=%qr%
-if /I "%qr%"=="Y" (start https://github.com/GJKen/GJKen.github.io) else(goto exit)
+set /p qr=是否打开git主页检查?(Y or N):
+if /I %qr%==Y start https://github.com/GJKen/GJKen.github.io
+pause

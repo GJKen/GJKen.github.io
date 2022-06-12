@@ -4,8 +4,11 @@
 	bottom: 20px;
 	transition: .15s;
 }
+#tg:hover,#html:hover{
+	fill: bisque;
+}
 #tg:active,#html:active{
-	fill: peachpuff;
+	fill: saddlebrown;
 }
 #tg{
 	fill: #1e98d4;
