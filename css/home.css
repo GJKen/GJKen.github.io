@@ -1,0 +1,150 @@
+/* 搬运自https://blog.csdn.net/qq_45448704/article/details/121595534 */
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #fbe9e7;
+}
+
+.card {
+	position: relative;
+	width: 450px;
+	height: 600px;
+	background-color: #fff;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
+	transition: 1s;
+}
+
+/* 触碰卡片x轴偏移度 */
+.card:hover {transform: translateX(0%);}
+
+.card .imgBox {
+	/* 封面 */
+	position: relative;
+	width: 00%;
+	height: 100%;
+	z-index: 1;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	background: #ff7b7c;
+	transition: 1s;
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
+}
+
+.card:hover .imgBox {
+	transform: rotateY(-180deg);
+}
+
+.card .imgBox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	animation: anime1 1.2s;
+}
+
+.card .imgBox img:nth-child(2) {
+	transform: rotateY(180deg);
+}
+
+.card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card .details .content {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card .details .content .SVGInject{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* #telegram-line{
+	fill: #1e98d4;
+} */
+/* svg图标长和宽 */
+.card .details .content .icons svg{
+	width: 36px;
+	height: 36px;
+}
+
+/* 鼠标悬浮icon颜色 */
+/* .card .details .content .icons a:hover {
+	background-color: #e21212;
+} */
+
+/* dark组件 */
+.mode_switch{
+	display: flex;
+	align-items: center;
+}
+
+.mode_switch_toggle{
+	display: flex;
+	align-items: center;
+	width: 80px;
+	height: 35px;
+	border-radius: 100px;
+	background-color: black;
+}
+
+.mode_switch_circle{
+	width: 28px;
+	height: 28px;
+	border-radius: 120px;
+	background-color: yellow;
+}
+
+.card .details .content p{text-indent: 2em;margin-bottom: 420px;}
+
+/* 涩涩隐藏效果 */
+.card .details .content span{
+	opacity: 0;
+	transition: .18s;
+}
+.card .details .content span:hover{
+	opacity: 1;
+	color: palevioletred;
+	transition: .5s;
+}
+
+.anime1{animation: anime1 5s;}
+.anime2{animation: anime2 5s;}
+
+/* tittle字体效果 */
+.tittle{
+	/* background-image: linear-gradient(); */
+	transition: .3s,background-position 0s;
+/* 	控制蓝条长和宽度
+	width: 120%px;
+	height: 28px;
+	控制蓝条div的内外边距和居中 */
+	font-size: 20px;
+	text-align: center;
+}
+
+.tittle:hover {color: #e21212;}

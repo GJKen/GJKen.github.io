@@ -7,15 +7,22 @@
 		<meta name="description" content="网站仅用于学习交流使用">
 		<meta name="keywords" content="html | css | javascript">
 		<meta name="author" content="GJKen">
-		<script src="js/svg-inject.js"></script>
+		<script src="./js/svg-inject.js"></script>
 		<link rel="stylesheet" href="./css/index.css">
-		<link rel="stylesheet" href="css/icon.css">
+		<style>
+			[type=icon_index]{
+				width: 40px;
+				height: 40px;
+				bottom: 20px;
+				transition: .15s;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="card">
 			<div id="icon">
-				<div id="logo"><a href="https://t.me/GJK_chat" target="_blank" title="Telegram联系我"><img type="icon_index" style="fill: #1e98d4;" id="tg" src="./icon/telegram-line.svg" onload="SVGInject(this)"></a></div>
-				<div id="logo"><a href="exercise html/!search.html" title="html学习记录"><img type="icon_index" style="fill: #1ba035;" src="./icon/html5-line.svg" onload="SVGInject(this)"></a></div>
+				<a href="https://t.me/GJK_chat" target="_blank" id="logo" title="Telegram联系我"><img type="icon_index" id="tg" src="./icon/telegram-line.svg" onload="SVGInject(this)"></a>
+				<a href="exercise html/!search.html" id="logo" title="html学习记录"><img type="icon_index" id="html" src="./icon/html5-line.svg" onload="SVGInject(this)"></a>
 			</div>
 			<div id="content">
 				<div class="hello">

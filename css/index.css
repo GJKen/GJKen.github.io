@@ -1,0 +1,101 @@
+*::selection{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+	display: flex;
+	justify-content: center;
+	background: #fbe9e7;
+}
+#card{
+	width: 530px;
+	height: 300px;
+	min-width: 400px;
+	background: white;
+	position: relative;
+	align-content: center;
+	/* 右偏移 下偏移 发散 rbga控制透明度*/
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
+	transition: .4s infinite;
+	border-radius: 10px 10px 10px 10px;
+	transform: translate(0, 100%);
+}
+#icon{
+	width: 12%;
+	height: 100%;
+	background: burlywood;
+	float: left;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
+	transition: .2s;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+#icon:hover{
+	transition: .2s;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+}
+#logo{
+	width: 40px;
+	height: 40px;
+	bottom: 20px;
+	transition: .15s;
+}
+#logo>a{
+	display: block;
+}
+#log>a>img{
+	fill: #1e98d4;
+}
+#logo:hover{
+	fill: bisque;
+	transition: .15s;
+	border-radius: 12px;
+	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .2);
+}
+#logo:active{
+	fill: saddlebrown;
+	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .35);
+}
+#content{
+	width: 88%;
+	height: 100%;
+	background: white;
+	float: right;
+	border-radius: 0 10px 10px 0;
+}
+.hello>h3{
+	font-family: sans-serif;
+	text-align: center;
+	margin: 10px 0 20px 0;
+	transition: .2s;
+}
+.hello>h3:hover{color: #e21212;}
+.hello>p{
+	margin: 0 10px 0 10px;
+	text-indent: 2em;
+}
+span{
+	color: palevioletred;
+	opacity: 0;
+	transition: .18s;
+}
+span:hover{
+	opacity: 1;
+	transition: .5s;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 500px){
+	#icon{
+		width: 100%;
+		height: 20%;
+	}
+	#content{
+		width: 100%;
+		height: 80%;
+		float: right;
+		border-radius: 0 10px 10px 0;
+	}
+}
