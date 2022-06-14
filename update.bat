@@ -1,7 +1,6 @@
 @echo off
 echo 更新GJKen.github.io代码
 set /p info="输入更新的信息(例如:update %date:~0,10% %time:~0,5%):"
-pause
 git init
 git add .
 git commit -m "%info%"
