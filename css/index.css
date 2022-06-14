@@ -65,7 +65,7 @@ span:hover{
 
 /* 响应式布局 */
 /* PC */
-@media screen and (max-width: 400px){
+@media screen and (max-width: 750px){
 	#card{
 		width: 480px;
 		height: 400px;
