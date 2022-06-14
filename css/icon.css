@@ -4,13 +4,13 @@
 	bottom: 20px;
 	transition: .15s;
 }
-[type="icon_index"]:hover{
-	fill: bisque !important;
-	transition: .15s !important;
+[type=icon_index]:hover{
+	fill: bisque ;
+	transition: .15s ;
 	border-radius: 12px;
 	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .2);
 }
-[type="icon_index"]:active{
-	fill: saddlebrown !important;
+[type=icon_index]:active{
+	fill: saddlebrown ;
 	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .35);
 }
