@@ -7,9 +7,10 @@
 [type="icon_index"]:hover{
 	fill: bisque !important;
 	transition: .15s !important;
-	/* box-shadow: ; */
+	border-radius: 12px;
 	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .2);
 }
 [type="icon_index"]:active{
 	fill: saddlebrown !important;
+	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .35);
 }

@@ -1,56 +1,46 @@
-*::selection{margin: 0;padding: 0;box-sizing: inherit;color: beige;background-color: black;}
+*::selection{margin: 0;padding: 0;box-sizing: border-box;}
 body{
 	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	min-width: 530px;
-	min-height: 300px;
 	background: #fbe9e7;
 }
 #card{
 	width: 530px;
 	height: 300px;
+	min-width: 400px;
 	background: white;
-	display: inline-block;
-	position: absolute;
-	top: 25%;
+	position: relative;
+	align-content: center;
 	/* 右偏移 下偏移 发散 rbga控制透明度*/
 	box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
 	transition: .4s infinite;
 	border-radius: 10px 10px 10px 10px;
+	transform: translate(0, 100%);
 }
-
-#nav{
-	width: 15%;
+#icon{
+	width: 12%;
 	height: 100%;
-	position: relative;
 	background: burlywood;
 	float: left;
 	border-radius: 10px 10px 10px 10px;
 	z-index: 1;
 	transition: .2s;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
 }
-#nav:hover{
+#icon:hover{
 	transition: .2s;
 	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
-
-#icon{
-	display: inline-block;
-	float: left;
-	position: relative;
-	left: 25%;
-}
-#icon>a{
-	width: 40px;
-	height: 40px;
+#logo>a{
 	display: block;
-	margin-top: 10px;
 }
-
 #content{
-	width: 85%;
+	width: 88%;
 	height: 100%;
 	background: white;
 	float: right;
@@ -62,9 +52,7 @@ body{
 	margin: 10px 0 20px 0;
 	transition: .2s;
 }
-.hello>h3:hover{
-	color: #e21212;
-}
+.hello>h3:hover{color: #e21212;}
 .hello>p{
 	margin: 0 10px 0 10px;
 	text-indent: 2em;
@@ -77,4 +65,18 @@ span{
 span:hover{
 	opacity: 1;
 	transition: .5s;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 500px){
+	#icon{
+		width: 100%;
+		height: 20%;
+	}
+	#content{
+		width: 100%;
+		height: 80%;
+		float: right;
+		border-radius: 0 10px 10px 0;
+	}
 }
