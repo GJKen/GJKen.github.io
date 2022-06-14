@@ -8,11 +8,11 @@
 	fill: bisque;
 	transition: .15s;
 	border-radius: 12px;
-	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .1);
+	box-shadow:inset 0 0 10px rgba(30, 152, 212, .2),0 0 20px rgba(30, 152, 212, .1);
 }
 [type=icon_index]:active{
 	fill: saddlebrown;
-	box-shadow:inset 0 0 10px rgba(0, 0, 0, .1),0 0 20px rgba(0, 0, 0, .35);
+	box-shadow:inset 0 0 10px rgba(0, 106, 106, .1),0 0 20px rgba(0, 106, 106, .25);
 }
 #tg{fill: #1e98d4;}
 
