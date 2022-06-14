@@ -1,8 +1,0 @@
-/* 页面整体样式 */
-* {padding::0; marging:0;}
-.all{
-	width: 900px;
-	height: 900px;
-	margin: 50px auto;
-	text-align: center;
-}
