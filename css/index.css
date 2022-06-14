@@ -17,7 +17,7 @@ body{
 	top: 25%;
 	/* 右偏移 下偏移 发散 rbga控制透明度*/
 	box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
-	transition: .4s;
+	transition: .4s infinite;
 	border-radius: 10px 10px 10px 10px;
 }
 
@@ -29,9 +29,11 @@ body{
 	float: left;
 	border-radius: 10px 10px 10px 10px;
 	z-index: 1;
+	transition: .2s;
 }
 #nav:hover{
-	box-shadow: 1px 0 15px rgba(0, 0, 0, .25);
+	transition: .2s;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
 
 #icon{
@@ -68,11 +70,11 @@ body{
 	text-indent: 2em;
 }
 span{
+	color: palevioletred;
 	opacity: 0;
 	transition: .18s;
 }
 span:hover{
 	opacity: 1;
-	color: palevioletred;
 	transition: .5s;
 }
