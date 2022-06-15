@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>align-items 对齐属性</title>
+		<link rel="stylesheet" href="./css/垃圾.css"/>
+		<style type="text/css">
+			.main {
+				width: 290px;
+				height: 100px;
+				border: 1px solid black;
+				/* 注意: Internet Explorer 10 及更早版本浏览器不支持 align-items 属性。 */
+				/* display: -webkit-flex; */
+				/* 注意: Safari 7.0 及更新版本通过 -webkit-align-items 属性支持该属性 */
+				/* -webkit-align-items: center; */
+				display: flex;
+				align-items: center;
+			}
+			.main div {
+			   -webkit-flex: 1; /* Safari 6.1+ */
+			   flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>定义和用法</h3>
+		<li>align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。
+		<li>提示：使用每个弹性对象元素的 align-self 属性可重写 align-items 属性。</li>
+		<div>
+			<p>平均分 按所有文字所占的长度分div 文字越少加的div越多</p>
+			<div class="main">
+				<div style="background-color:coral;">RED</div>
+				<div style="background-color:lightblue;">BLUE</div>
+				<div style="background-color:lightgreen;">Green</div>
+				<div style="background-color:lightpink;">Pink</div>
+				<div style="background-color:lightgray;">Gray</div>
+				<div style="background-color:lightseagreen;">Seagreen</div>
+			</div>
+		</div>
+		<li>其它属性:</li>
+		<iframe src="https://www.runoob.com/try/playit.php?f=playcss_align-items&preval=stretch" width="1000" height="530"></iframe>
+	</body>
+</html>

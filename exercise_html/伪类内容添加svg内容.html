@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪类内容添加svg内容</title>
+		<style>
+			*{margin: 0;padding: 0;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			a{display: inline-block;}
+			#square{
+			   background-color: green;
+			   width: 100px;
+			   height: 100px;
+			}
+			#square:before{
+			   display: block;
+			   content: url('data:image/svg+xml;%20charset=utf8,%3C?xml%20version=%221.0%22%20standalone=%22no%22?%3E%3Csvg%20viewBox=%220%200%201024%201024%22%20xmlns=%22http://www.w3.org/2000/svg%22%20p-id=%2225762%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%3E%3Cdefs%3E%3Cstyle%20type=%22text/css%22%3E%3C/style%3E%3C/defs%3E%3Cpath%20d=%22M128%20128h768v85.333333H128V128z%20m213.333333%20341.333333v426.666667H256V469.333333H128l170.666667-170.666666%20170.666666%20170.666666H341.333333z%20m426.666667%200v426.666667h-85.333333V469.333333h-128l170.666666-170.666666%20170.666667%20170.666666h-128z%22%3E%3C/path%3E%3C/svg%3E');
+			   background-size: 28px 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>使用编码转换svg内容 然后用before添加svg 下面是例子</p>
+		<a href="https://www.baidu.com">
+			<p id="square"></p>
+		</a>
+		<br><br>
+		<a href="https://tool.oschina.net/encode?type=4" target="_blank">在线编码转换</a>
+		<pre>
+  下面是代码预览 关键字段如果缺一转换为 encodeURI 则无法显示
+&lt?xml version="1.0" standalone="no">&ltsvg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="25762" xmlns:xlink="http://www.w3.org/1999/xlink"&lg&ltdefs&lg&ltstyle type="text/css">&lt/style>&lt/defs>&ltpath>&lt/path>这里填svg内容&lt/path>&lt/svg>"
+		</pre>
+	</body>
+</html>

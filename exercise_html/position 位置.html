@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>position 位置</title>
+		<style>
+			a{color: #00BCD5;}
+			.div_border{display: inline-block;border: 1px solid black;}
+			.pos_abs{
+				position:absolute;
+				left:10px;
+				top:110px
+			}
+			h5.pos_rel_left{
+				position:relative;
+				left:-20px
+			}
+			h5.pos_rel_right{
+				position:relative;
+				left:20px
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://blog.csdn.net/FungLeo/article/details/50056111" target="_blank">csdn教程</a><br><br>
+		<a href="https://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank">W3C教程</a><br>
+		<p>static:默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）</p>
+		<div class="div_border">
+			<p>absolute:通过绝对定位，元素可以放置到页面上的任何位置。下面的标题距离页面左侧 100px，距离页面顶部 150px。</p>
+			<div class="pos_abs"><h2>这是带有绝对定位的标题 置顶显示在页面上</h1></div>
+			<p>文本内容文本内容文本内容<br>文本内容文本内容文本内容<br>文本内容文本内容文本内容<br>文本内容文本内容文本内容<br>文本内容文本内容文本内容<br></p><br>
+		</div>
+		<div class="div_border">
+			<p>relative:生成相对定位的元素，相对于其正常位置进行定位</p>
+			<h5>这是位于正常位置的标题</h5>
+			<h5 class="pos_rel_left">这个标题相对于其正常位置向左移动</h5>
+			<h5 class="pos_rel_right">这个标题相对于其正常位置向右移动</h5>
+			<p>相对定位会按照元素的原始位置对该元素进行移动。</p>
+			<p>样式 "left:-20px" 从元素的原始左侧位置减去 20 像素。</p>
+			<p>样式 "left:20px" 向元素的原始左侧位置增加 20 像素。</p>
+		</div>
+	</body>
+</html>

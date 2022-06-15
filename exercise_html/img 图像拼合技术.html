@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>img 图像拼合技术</title>
+		<style>
+			img.home {
+				width: 46px;
+				height: 44px;
+				background: url(../img/exercise/img_navsprites.gif) 0 0;
+			}
+			img.next {
+				width: 43px;
+				height: 44px;
+				/* 左-70px, 顶部0px */
+				background: url(../img/exercise/img_navsprites.gif) -70px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<p>注: &lt;img class="home" src="img_trans.gif"/> 因为不能为空,src属性只定义了一个小的透明图像. 显示的图像将是我们在CSS中指定的背景图像</p>
+		<img class="home" src="../img/exercise/img_navsprites_none.png"><br><br>
+		<img class="next" src="../img/exercise/img_navsprites_none.png">
+	</body>
+</html>
