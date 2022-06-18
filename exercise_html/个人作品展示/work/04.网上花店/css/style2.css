@@ -1,0 +1,25 @@
+.all{
+	width:976px;
+	height:1600px;
+	background-color:#e9e9e9;
+	margin:0 auto;}
+.p2{
+	width:606px;
+	padding:10px;
+	color:#939393;}
+.p1{
+	width:0 auto;
+	height:800px;
+	color:#939393;}
+.img1{
+	width:0 auto;
+	height:180px;}
+.img2{
+	width:0 auto;
+	height:350px;}
+.img3{
+	width:0 auto;
+	height:100px;}
+.img4{
+	margin-left:150px;
+	text-align:left;}

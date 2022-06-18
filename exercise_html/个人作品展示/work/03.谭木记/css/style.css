@@ -1,0 +1,121 @@
+*{margin:0;padding:0;}
+body{
+	font-family:"隶书";
+	font-size:16px;
+	color:#303131;
+	padding: 50px 15% 0;
+	background: #3d4554;
+	min-width: 1187px;
+}
+
+/* 头部 */
+.header{
+	overflow: hidden;
+	border-radius: 10px;
+	text-align: center;
+	background: white;
+	transition: .2s;
+	font-family: Arial;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+}
+.header:hover{
+	transition: .2s;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+.header>h1{
+	padding: 20px;
+	font-size: 50px;
+}
+.header a{
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	line-height: 1em;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.header a:first-child{
+	float: left;
+}
+.header a:hover{
+	color: black;
+	transition: .2s;
+	background-color: pink;
+	border-radius: 8.5px;
+}
+.topnav{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	border-radius: 2px 0 0 8.5px;
+	background-color: #333;
+	display: inline-block;
+}
+.topnav>a:nth-child(7){
+	background-color: #7c251c;
+	animation: fade_in .2s;
+	border-radius: 8.5px;
+}
+@keyframes fade_in{
+	from{opacity: 0;}
+	to{opacity: 100;}
+}
+
+#row{
+	padding: 20px;
+	margin: 20px 0;
+	float: left;
+	background: white;
+	border-radius: 10px;
+}
+#row:hover{
+	transition: .2s;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+#row_header{
+	padding: 0 25% 0;
+	background: #525252;
+	margin: 10px auto 0;
+	text-align: center;
+}
+.banner{
+	/* width:980px; */
+	margin:0 auto;
+}
+.banner img:first-of-type{
+	width: 100%;
+}
+.content{
+	margin: 100px;
+	float: left;
+	/* width:980px; */
+	margin:0 auto;
+	color:#7c251c;
+	font-size: 30px;
+	text-align: center;
+}
+.content h3{
+	font-size: 20px;
+}
+.content p{
+	font-size: 20px;
+	text-align: left;
+	text-indent: 2em;
+	color: #303131;
+}
+.content p i{
+	font-size: 30px;
+	color: #7c251c;
+}
+.content p strong,.content p u{color: #7c251c;}
+.content p u{font-size: 24px;}
+.content p b{background-color: #f5ee30;}
+
+.footer{
+	float: left;
+	margin: 50px 25% 10px;
+	color: black;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	text-align: center;
+}

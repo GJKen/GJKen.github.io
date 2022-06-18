@@ -1,0 +1,152 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+*::selection{color: salmon;background-color: rgba(30, 152, 212, .8);}
+body{
+	font-family: Arial;
+	padding: 50px 15% 0;
+	background: #3d4554;
+	min-width: 1187px;
+}
+
+/* 头部 */
+.header{
+	overflow: hidden;
+	border-radius: 10px;
+	text-align: center;
+	background: white;
+	transition: .2s;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+}
+.header:hover{
+	transition: .2s;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+.header>h1{
+	padding: 20px;
+	font-size: 50px;
+}
+.header a{
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	line-height: 1em;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.header a:first-child{
+	float: left;
+}
+.header a:hover{
+	color: black;
+	transition: .2s;
+	background-color: pink;
+	border-radius: 8.5px;
+}
+
+.topnav{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	border-radius: 2px 0 0 8.5px;
+	background-color: #333;
+	display: inline-block;
+}
+.topnav>a:nth-child(8){
+	background-color: #016bb9;
+	animation: fade_in .2s;
+	border-radius: 8.5px;
+}
+@keyframes fade_in{
+	from{opacity: 0;}
+	to{opacity: 100;}
+}
+
+/* 文章整体 */
+#row{
+	background: #f2f2f2;
+	margin: 20px 0;
+	padding: 50px 50px 50px;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#row:hover{
+	transition: .2s;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+#row::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#row_header{
+	width: 100%;
+	margin-bottom: 10px;
+	float: left;
+}
+#row_header p{
+	float: right;
+}#row_header img:last-child{
+	padding: 1% 0 0;
+	width: 100%;
+}
+
+#film{
+	float: left;
+}
+#film_new{
+	margin: 8px;
+	padding: 8px 10% 0;
+}
+#film_content{
+	float: left;
+	margin: 8px;
+	padding: 0 5px 5px 0;
+}
+#film_content>img{
+	width: 16%;
+	float: right;
+}
+#article{
+	text-align: center;
+}
+#article>h2:first-child{
+	font-size: 2em;
+}
+#article>p:nth-child(2){
+	color: #666666;
+	font-style: italic;
+}
+#article div img{
+	width: 100%;
+	padding: 10px 0 10px;
+}
+
+#comment hr{
+	border-color: #ccc;
+}
+#user{
+	background: white;
+}
+#user>p:first-of-type{
+	margin: 0 0 15px 0;
+}
+#user>p:last-of-type{
+	margin: 1px 0 0 0;
+	color: #f60;
+}
+#user>img{
+	float: left;
+}
+#user span{
+	color: #999;
+	padding: 0 20px 0;
+}
+
+#footer{
+	margin-top: 20px;
+	text-align: center;
+}
+#footer>p{
+	color: #1d5983;
+	font-size: .95em;
+	line-height: 2em;
+}
