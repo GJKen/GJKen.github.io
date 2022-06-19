@@ -1,0 +1,96 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+body{
+	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+	text-align: center;
+}
+div{
+	margin: 30px;
+	float: left;
+	border: 1px black solid;
+	border-radius: 10px;
+}
+.loader1{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	/* 设置边框颜色 当作背景 */
+	border: 16px #f3f3f3 solid;
+	/* 设置top边框 */
+	border-top: 16px #3498db solid;
+	/* linear 控制动画轴使其平衡走向 */
+	/* infinite 控制无限滚动 */
+	animation: anime1 2s linear infinite;
+	-webkit-animation: anime1 2s linear infinite;
+}
+@keyframes anime1{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes anime1{
+	0%{-webkit-transform: rotate(0deg);}
+	100%{-webkit-transform: rotate(360deg);}
+}
+
+/* 动画2 */
+.loader2{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 16px #f3f3f3 solid;
+	border-top: 16px #3498db solid;
+	/* 这里删除了 linear 属性*/
+	animation: anime2 2s infinite;
+	-webkit-animation: anime2 2s infinite;
+}
+@keyframes anime2{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes anime2{
+	0%{-webkit-transform: rotate(0deg);}
+	100%{-webkit-transform: rotate(360deg);}
+}
+
+/* 动画3 */
+.loader3{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 16px #f3f3f3 solid;
+	border-top: 16px red solid;
+	border-bottom: 16px red solid;
+	/* 这里删除了 linear 属性*/
+	animation: anime3 .8s linear infinite;
+	-webkit-animation: anime3 .8s linear infinite;
+}
+@keyframes anime3{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes anime3{
+	0%{-webkit-transform: rotate(0deg);}
+	100%{-webkit-transform: rotate(360deg);}
+}
+
+/* 动画4 */
+.loader4{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	/* 谷歌配色 */
+	border-top: 16px #db4437 solid;
+	border-left: 16px #f4b400 solid;
+	border-right: 16px #4285f4 solid;
+	border-bottom: 16px #0f9d58 solid;
+	/* 这里删除了 linear 属性*/
+	animation: anime4 .8s linear infinite;
+	-webkit-animation: anime4 .8s linear infinite;
+}
+@keyframes anime4{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes anime4{
+	0%{-webkit-transform: rotate(0deg);}
+	100%{-webkit-transform: rotate(360deg);}
+}

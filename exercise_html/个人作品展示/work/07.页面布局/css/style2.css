@@ -1,0 +1,45 @@
+body{margin: 0;padding: 0;}
+div{width: 980px;margin: 0 auto;}
+#top{
+	height:40px;
+	background: url(../img/top.jpg);
+}
+
+#nav{
+	height: 60px;
+	background: url(../img/nav.jpg);
+}
+#banner{
+	height: 200px;
+	background: url(../img/banner.jpg);
+}
+#content{height: 300px;}
+
+.content_left{
+	width: 200px;
+	height: 300px;
+	background-color: #CCC;
+	float: left;
+	margin: 0;
+	background: url(../img/content_left.jpg);
+}
+.content_middle{
+	width: 570px;
+	height: 300px;
+	background-color:#CCC;
+	float:left;
+	margin: 0 0 5px;
+	background: url(../img/content_middle.jpg);
+}
+.content_right{
+	width: 200px;
+	height: 300px;
+	background-color: #ccc;
+	float: right;
+	margin: 0;
+	background: url(../img/content_right.jpg);
+}
+#footer{
+	height: 90px;
+	background: url(../img/footer.jpg);
+}
