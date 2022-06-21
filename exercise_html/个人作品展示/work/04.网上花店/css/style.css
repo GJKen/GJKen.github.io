@@ -35,7 +35,8 @@ body{
 .header a:first-child{
 	float: left;
 }
-.header a:hover{
+
+.topnav a:hover{
 	color: black;
 	transition: .2s;
 	background-color: pink;

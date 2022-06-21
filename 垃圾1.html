@@ -1,13 +1,553 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>垃圾1</title>
-		<link rel="stylesheet" href="./css/垃圾1.css">
-		<link rel="stylesheet" href="css/icon.css">
-		<script src="js/svg-inject.js"></script>
-	</head>
-	<body>
-		
-	</body>
+<head>
+	<meta charset="utf-8">
+	<title>sql 答案</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{
+			font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+			background: #1a202c;
+			display: flex;
+			justify-content: center;
+		}
+		table{
+			border: 1px black solid;
+			border-collapse: collapse;
+			color: aliceblue;
+			background: #2d3748;
+			counter-reset: section;
+		}
+		td{
+			width: 900px;
+			height: 2em;
+			border: 1px black solid;
+			text-align: center;
+			padding: 0 10px 0;
+		}
+		td:first-child{
+			width: auto;
+		}
+		tr:before{
+			counter-increment: section;
+			content: "" counter(section) ".";
+		}
+		tr:hover{
+			color: bisque;
+			background: rgba(106,106,106, .9);
+			box-shadow: 0px 0px 20px rgba(0,0,0, .3);
+			transition: .2s;
+		}
+	</style>
+</head>
+<body>
+	<div id="cneter">
+		<table>
+			<tr>
+				<td>查看数据表的索引信息使用哪个系统命令</td>
+				<td>sp_helpindex</td>
+			</tr>
+			<tr>
+				<td>索引分为（）和（）两种</td>
+				<td>聚集，非聚集</td>
+			</tr>
+			<tr>
+				<td>索引是数据库表中一列或多列的值（）后的存储结构，可以加快从表中（）的速度。</td>
+				<td>排序，检索数据</td>
+			</tr>
+			<tr>
+				<td>重新组织索引是指对表和视图的聚集索引和非聚集索引进行碎片整理，以（）。</td>
+				<td>提高索引扫描的性能</td>
+			</tr>
+			<tr>
+				<td>非聚集索引中索引的逻辑顺序与磁盘上行的物理存储顺序不同，一个表中可以拥有多个非聚集索引。除了聚集索引以外的索引都是非聚集索引。</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>聚集索引也叫聚簇索引，数据行的物理顺序与列值（一般是主键的那一列）的逻辑顺序相同，一个表中可以拥有多个聚集索引。</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>哪些列上不适合创建索引</td>
+				<td>很少数值的列 | text、image类型的列 | 很少使用的列</td>
+			</tr>
+			<tr>
+				<td>索引的缺点</td>
+				<td>会降低了数据的维护速度 | 占磁盘空间</td>
+			</tr>
+			<tr>
+				<td>索引的优点</td>
+				<td>可以加速表之间的连接 | 保证唯一性 | 加快数据查询速度，提升性能 | 减少分组和排序的时间</td>
+			</tr>
+			<tr>
+				<td>哪些列上适合创建索引</td>
+				<td>频繁搜索的列 | 连接列 | 主键、外键列 | where子句列</td>
+			</tr>
+			<tr>
+				<td>存储过程中使用到的参数需要提前定义，参数名必须以( )符号开始</td>
+				<td>@</td>
+			</tr>
+			<tr>
+				<td>执行存储过程可以使用 （）命令来执行</td>
+				<td>execute（简写exec）</td>
+			</tr>
+			<tr>
+				<td>加密存储过程使用（）关键字</td>
+				<td>with encryption</td>
+			</tr>
+			<tr>
+				<td>创建用户自定义存储过程，可以使用</td>
+				<td>create procedure 命令</td>
+			</tr>
+			<tr>
+				<td>存储过程输入变量与输出变量的区别是关键字output</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>SQL Server数据库中，系统存储过程以sp_开头，扩展存储过程以xp_开头</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>存储过程可以加密，加密后存储过程语句不能被查看</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>存储过程是数据库的一个对象，命名必须唯一</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>存储过程执行必须带参数</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>存储过程优点</td>
+				<td>存储过程只在创建时进行变异，以后执行都不需要重新编译，提高数据库的执行速度 | 保证数据库安全 | 可以使得程序模块化 | 使用存储过程可以减少网络通讯流量</td>
+			</tr>
+			<tr>
+				<td>存储过程分为</td>
+				<td>扩展存储过程 | 用户自定义存储过程 | 系统存储过程</td>
+			</tr>
+			<tr>
+				<td>备份数据库使用关键字</td>
+				<td>backup</td>
+			</tr>
+			<tr>
+				<td>进行数据库备份时，首先必须创建用来存储备份的备份设备，备份设备一般是（）</td>
+				<td>硬盘（disk）</td>
+			</tr>
+			<tr>
+				<td>还原数据库使用关键字</td>
+				<td>restore</td>
+			</tr>
+			<tr>
+				<td>在数据库的实际使用过程中，可能会由于各种原因，例如用户操作失误、硬件故障或自然灾害等，造成数据的破坏或丢失甚至业务瘫痪。数据备份工作就显得尤为重要，它确保了系统的可靠性和数据的完整性。</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>可以更频繁地进行事务日志备份，减少数据丢失的风险，还原时可以单独还原日志文件</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>创建备份设备后，才能将需要备份的数据库备份到备份设备中</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>完整备份需花费更多时间才能完成，并且需要更多的存储空间，因此只需要偶尔执行</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>还原是备份的相反操作，当完成备份之后，如果发生硬件或软件的损坏、意外事故或者操作失误导致数据丢失时，需要对数据库中的重要数据进行还原，而且要还原到特定时间点</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>差异备份比完整备份工作量小且速度快，对正在运行的系统影响较小，因此可以经常备份</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>完整备份是差异备份和事务日志备份的基础，同样在还原时，第一步要先做完整备份的还原，完整备份的还原将还原到完整备份的时刻</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>谁可以做备份</td>
+				<td>固定的服务器角色sysadmin（系统管理员） | 固定的数据库角色db_owner（数据库所有者） | 固定的数据库角色db_backupoperator（允许进行数据库备份的用户）</td>
+			</tr>
+			<tr>
+				<td>备份类型有</td>
+				<td>差异备份 | 数据日志备份 | 完整备份</td>
+			</tr>
+			<tr>
+				<td>修改数据库的命令是</td>
+				<td>Alter Database</td>
+			</tr>
+			<tr>
+				<td>关于创建数据库，以下说法正确的是</td>
+				<td>创建数据库时，数据库的默认大小可以修改，文件名称可以修改</td>
+			</tr>
+			<tr>
+				<td>每个数据库必定只有一个()</td>
+				<td>主要数据文件</td>
+			</tr>
+			<tr>
+				<td>收回许可的语句是</td>
+				<td>revoke</td>
+			</tr>
+			<tr>
+				<td>下列哪个不是sql 数据库文件的后缀 | 数据库文件后缀有</td>
+				<td>mdf | ldf | ndf</td>
+			</tr>
+			<tr>
+				<td>关于创建数据库的说法正确的是</td>
+				<td>新创建的数据库中包含model数据库中的表对象</td>
+			</tr>
+			<tr>
+				<td>在SQL Server 2014中，关于数据库的说法正确的是</td>
+				<td>一个数据库只能包含一个主要数据文件和多个日志文件</td>
+			</tr>
+			<tr>
+				<td>每个数据库中也可以创建很多张表，表就是平时我们最常见的二维表，二维表中的行就是我们的一条数据，在数据库中通常称为一个</td>
+				<td>记录</td>
+			</tr>
+			<tr>
+				<td>哪个关键字是删除数据库的</td>
+				<td>DROP DATABASE</td>
+			</tr>
+			<tr>
+				<td>DBA是</td>
+				<td>数据库管理员(data base admin)</td>
+			</tr>
+			<tr>
+				<td>在SQL语言中，"授权"命令是</td>
+				<td>GRANT</td>
+			</tr>
+			<tr>
+				<td>第一次对数据库进行的备份必须是（ ）备份</td>
+				<td>完整备份</td>
+			</tr>
+			<tr>
+				<td>在SQLServer2014中，我们修改数据库的语句是ALTER DB</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>db_owner是一个固定的数据库角色</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>数据库存储在表中</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>SQLServer要确定删除数据库之前没有人连接到数据库</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>创建数据库可以用对象资源管理器完成</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>创建数据库的时候不可以创建新的文件组</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>数据库被分离后，数据文件还在，被分离的数据文件能被重新附加到其它的SQLServer2014实例上</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>服务器角色DBCreator的权限，下面哪个说法更贴切</td>
+				<td>可以创建、更改、删除和还原任何数据库</td>
+			</tr>
+			<tr>
+				<td>Oracle数据库由（ ）公司开发</td>
+				<td>甲骨文</td>
+			</tr>
+			<tr>
+				<td>关于权限的说法，不正确的是</td>
+				<td>只要能够进入数据库就可以授权</td>
+			</tr>
+			<tr>
+				<td>下面哪个关键字是完成创建数据库的关键字</td>
+				<td>CREATE DATABASE</td>
+			</tr>
+			<tr>
+				<td>在SQL Server 2014数据库系统中，下列关于model数据库的说法正确的是</td>
+				<td>model数据库用作在系统上创建的所有数据库的模板</td>
+			</tr>
+			<tr>
+				<td>数据库恢复的主要依据是</td>
+				<td>事务日志</td>
+			</tr>
+			<tr>
+				<td>当管理员在给某个用户分配权限时只允许他访问指定的数据库，而不是整个服务器，这时候可以分配什么角色</td>
+				<td>固定数据库角色</td>
+			</tr>
+			<tr>
+				<td>关于SQL Server 2014缩小数据库的操作叙述正确的是</td>
+				<td>数据文件和日志文件都可以缩小</td>
+			</tr>
+			<tr>
+				<td>收回许可的语句是</td>
+				<td>revoke</td>
+			</tr>
+			<tr>
+				<td>数据库管理员小明希望将旧服务器上的数据库转移到新购置的服务器上，该如何做</td>
+				<td>将原有服务器上的数据库文件分离，再复制到新服务器上，在新服务器上执行附加的操作</td>
+			</tr>
+			<tr>
+				<td>以下哪个是数据库创建时必须提供,不能缺省的</td>
+				<td>数据库名</td>
+			</tr>
+			<tr>
+				<td>SQL Server身份验证模式将用户信息保存在（）数据库</td>
+				<td>master</td>
+			</tr>
+			<tr>
+				<td>SQL Server标准版和企业版的最大差别在</td>
+				<td>性能差异</td>
+			</tr>
+			<tr>
+				<td>在SQL Server 2014中，关于数据库的说法正确的是</td>
+				<td>一个数据库只能包含一个主要数据文件和多个日志文件</td>
+			</tr>
+			<tr>
+				<td>SQL全称是（Structured Query Language），叫（ ）语言，它是一门独立的语言，可以用来操作数据库当中的数据</td>
+				<td>结构化查询</td>
+			</tr>
+			<tr>
+				<td>要还原数据库到特定时间点，首先需要用到</td>
+				<td>完整的数据库备份的还原</td>
+			</tr>
+			<tr>
+				<td>如果想给SQL Server的登录名分配创建数据库的权限，应该分配哪个级别的权限</td>
+				<td>安全对象级别</td>
+			</tr>
+			<tr>
+				<td>SQL Server 采用的身份验证模式有</td>
+				<td>Windows 身份验证模式和混合模式</td>
+			</tr>
+			<tr>
+				<td>每个数据库必定只有一个</td>
+				<td>主要数据文件</td>
+			</tr>
+			<tr>
+				<td>下面哪个是主数据文件组</td>
+				<td>primary</td>
+			</tr>
+			<tr>
+				<td>下面哪个是系统架构</td>
+				<td>dbo</td>
+			</tr>
+			<tr>
+				<td>在T-SQL语言中，若要修改某数据库的结构，应该使用的修改关键字是</td>
+				<td>ALTER</td>
+			</tr>
+			<tr>
+				<td>数据库管理系统通常提供授权功能来控制不同用户访问数据的权限，这主要是为了实现数据库的</td>
+				<td>安全性</td>
+			</tr>
+			<tr>
+				<td>如果你被问这么一个问题：“公司里什么东西最贵？”你会怎么回答</td>
+				<td>数据无价</td>
+			</tr>
+			<tr>
+				<td>关于SQL Server的固定数据库角色public以下叙述错误的是</td>
+				<td>如果不需要可以删除public角色</td>
+			</tr>
+			<tr>
+				<td>授予用户Jean可以查询帐户表的权限 使用的SQL语句是</td>
+				<td>GRANT SELECT ON 帐户 TO Jean</td>
+			</tr>
+			<tr>
+				<td>下面哪句话是对的</td>
+				<td>使用附加和分离可以实现将数据库从一个服务器转移到另一个服务器 | 可以用备份的数据文件来恢复数据库</td>
+			</tr>
+			<tr>
+				<td>可以通过以下哪几种方式创建逻辑备份设备</td>
+				<td>使用T-SQL命令创建逻辑备份设备 | 在图形化界面下创建逻辑备份设备</td>
+			</tr>
+			<tr>
+				<td>SQL Server安全管理体现在</td>
+				<td>对用户的操作进行权限控制 | 对用户登陆进行身份验证</td>
+			</tr>
+			<tr>
+				<td>未知题目</td>
+				<td>Unix身份验证账号 | SQL Server身份验证账号</td>
+			</tr>
+			<tr>
+				<td>数据库管理员希望对数据库进行性能优化，以下操作中行之有效的方法为</td>
+				<td>在数据库服务器上尽量不要安装其他无关服务 | 将数据库的数据库文件和日志文件分别放在不同的分区上</td>
+			</tr>
+			<tr>
+				<td>新建的数据库至少包含</td>
+				<td>主要数据文件 | 日志文件</td>
+			</tr>
+			<tr>
+				<td>数据库的文件包含哪两种文件</td>
+				<td>数据文件 | 日志文件</td>
+			</tr>
+			<tr>
+				<td>发生一下哪些情况时，通常从完整数据库备份中还原</td>
+				<td>数据库的物理磁盘损坏 | 整个数据库被损坏或删除 | 数据库的相同副本被还原到不同的SQL Server实例</td>
+			</tr>
+			<tr>
+				<td>当数据库被破坏后，如果事先保存了数据库副本和数据库组文件，就有可能恢复数据库</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>SQL Server访问网络默认使用的事1433端口，这个端口是不可以更改的</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>通过身份认证登录SQL Server的用户，可以访问数据库中所有的表</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>SQLServer要确定删除数据库之前没有人连接到数据库</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>在SQLServer2014中，我们修改数据库的语句是ALTER DATABASE</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>SQLServer2014数据库一旦被分离，数据文件就被删除了</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>登陆到SQL Server的账号都能够访问服务器上的数据库</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>SQLServer数据库管理员创建了一个数据库Stuent，Student数据库可以有多个事务日志文件</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>db_datawriter是一个固定的服务器角色</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>架构所有权可以在主体之间转移</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>数据库文件默认的位置是在安装SQL Server时确定的</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>成功登陆到SQL Server后，就可以访问任意数据库了，该说法是正确的吗</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>固定数据库角色：db_datareader 的成员修改本数据库内表中的数据</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>数据库附加时，要重新附加所有与数据库相关联的文件，而不仅仅是主文件</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>在对象资源管理器下不可以创建数据库登录名</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>要还原数据库到特定时间点，首先需要用到</td>
+				<td>数据库事务日志备份的还原</td>
+			</tr>
+			<tr>
+				<td>向表中插入数据使用如下哪个关键字</td>
+				<td>Insert into</td>
+			</tr>
+			<tr>
+				<td>SqlServer2000以后的版本应用()解决用户离职问题</td>
+				<td>架构</td>
+			</tr>
+			<tr>
+				<td>有Exists的查询是</td>
+				<td>相关子查询</td>
+			</tr>
+			<tr>
+				<td>对查询列进行重命名，使用的关键字是</td>
+				<td>as</td>
+			</tr>
+			<tr>
+				<td>执行语句CREATE DATABASE Student的结果是</td>
+				<td>创建一个名为Student的数据库，包括数据文件和日志文件</td>
+			</tr>
+			<tr>
+				<td>删除数据库的关键字是</td>
+				<td>drop database</td>
+			</tr>
+			<tr>
+				<td>以下不属于备份数据库的模式是</td>
+				<td>定时备份</td>
+			</tr>
+			<tr>
+				<td>默认创建好可以先不使用它</td>
+				<td>主键</td>
+			</tr>
+			<tr>
+				<td>在数据系统中，对存取权限的定义称为</td>
+				<td>授权</td>
+			</tr>
+			<tr>
+				<td>在查询时，where后面通常跟的是</td>
+				<td>原始条件</td>
+			</tr>
+			<tr>
+				<td>SQL Server身份验证模式将用户信息保存在（）数据库</td>
+				<td>master</td>
+			</tr>
+			<tr>
+				<td>关于SQL Server 的数据库角色叙述正确的是</td>
+				<td>角色用来简化将很多权限分配给很多用户这个复杂任务的管理</td>
+			</tr>
+			<tr>
+				<td>查看数据库的属性可以使用哪几种方式</td>
+				<td>在图形化界面下查看 | 使用系统存储过程查看</td>
+			</tr>
+			<tr>
+				<td>SQL Server2014的安全级别分别是</td>
+				<td>数据库级 | 服务器级</td>
+			</tr>
+			<tr>
+				<td>在SQL Server2016中，约束有非空约束、默认约束、（）、（）、检查约束和唯一约束等6种类型</td>
+				<td>主键约束 | 外键约束</td>
+			</tr>
+			<tr>
+				<td>视图的重命名可以使用</td>
+				<td>可以使用sp_rename命令 | 可以右键选择重命名</td>
+			</tr>
+			<tr>
+				<td>sysadmin是数据库角色</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>每个表只可以设置一个主键</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>数据库对象不可以在架构之间移动</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>验证模式是在安装SQL Server过程中选择的。系统安装之后，可以重新修改SQL Server系统的验证模式</td>
+				<td>对</td>
+			</tr>
+			<tr>
+				<td>数据库管理系统只可以导入Excel文件，不可以将数据表导出成Excel文件</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>SQL Server 2014的认证模式必须在安装时设定，并且不可改变</td>
+				<td>错</td>
+			</tr>
+			<tr>
+				<td>登陆到SQL Server的账号都能够访问服务器上的数据库</td>
+				<td>错 不确定</td>
+			</tr>
+			<tr>
+				<td>每个表可以设置多个唯一约束</td>
+				<td>对</td>
+			</tr>
+		</table>
+	</div>
+</body>
 </html>

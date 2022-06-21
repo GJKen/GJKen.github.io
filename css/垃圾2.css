@@ -1,4 +1,32 @@
 *{margin: 0;padding:0;box-sizing: border-box;}
 body{
 	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+	background: url(../img/Backround_img/banner11.jpg) no-repeat;
+	background-size: cover;
+}
+
+.card{
+	float: left;
+	background: bisque;
+	width: 90%;
+	border-radius: 10px;
+}
+.card img{
+	width: 100%;
+	height: auto;
+	opacity: .8;
+	border-radius: 10px;
+}
+.card a{
+	/* display: inline-block; */
+}
+.content{
+	position: relative;
+	left: 20px;
+	top: -200px;
+/* 	left: 0;
+	top: 1%;
+	width: 100%; */
+	font-size: 18px;
+	margin-top:-9px;
 }
