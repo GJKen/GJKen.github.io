@@ -1,7 +1,6 @@
 *{padding: 0;margin: 0;}
-*::selection{color: beige;background-color: black;}
-
-html,body{
+::selection{color: beige;background-color: black;}
+body{
 	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 	background: #1a202c;
 	position: fixed;
@@ -10,30 +9,54 @@ html,body{
 	overflow: auto;
 }
 
-#fixed-btn{
+#fixed_btn{
+	width: 46px;
 	position: fixed;
-	width: auto;
-	height: auto;
-	padding: 5px;
 	background: #2d3748;
-	right: 0;
-	bottom: 8%;
+	/* 控制图标背景位置 */
+	right: 0px;
+	bottom: 30%;
 	border-radius: 10px 0 0 10px;
 	box-shadow: 0px 0px 5px black;
-	z-index: 1;
+	z-index: 9;
 }
-
-[type*=icon]{
-	width: 30px;
-	height: 30px;
-	transition: .15s;
-	display: block;
-	margin: 5px 0 5px 0;
+#icon{
+	width: auto;
+	height: 50px;
+	float: left;
+	display: flex;
+	align-items: center;
+	position: relative;
+	/* 控制图标位置 */
+	right: -4px;
+	transition: .2s;
+	border-radius: 50px 0 0 50px;
 }
-[type*=icon]:hover{fill: #8b949e;}
-[title*=返]:active{fill: #484f58;}
-[title="返回顶部"]{fill: #e2e2e2;}
-[title="返回主页"]{fill: #e2e2e2;}
+#icon a{
+	width: 300px;
+	color: pink;
+	float: left;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+#icon a p{
+	padding: 0 2px 0;
+}
+#logo{
+	fill: #e2e2e2;
+	/* 控制svg图标大小 高度和宽度任选一即可 */
+	width: 40px;
+}
+#icon:hover{
+	position: relative;
+	padding-left: 10px;
+	transition: .2s;
+	/* 触碰 */
+	right: 75px;
+	background: #2d3748;
+	box-shadow: 0px 0px 5px black;
+}
 
 #contents{
 	min-width: 900px;
@@ -63,10 +86,9 @@ html,body{
 	transform: translate(-50%, -50%);
 	overflow: auto;
 }
+
+/* 隐藏滚动条 */
 ::-webkit-scrollbar{display: none;}
-#table_contents::-webkit-scrollbar:hover{
-	display: block;
-}
 
 #table_contents li{
 	color: aliceblue;

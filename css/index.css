@@ -1,10 +1,12 @@
-*::selection{margin: 0;padding: 0;box-sizing: border-box;color: beige;background-color: black;}
+*{margin: 0;padding: 0;box-sizing: border-box;}
+::selection{color: beige;background-color: black;}
 body{
 	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 	display: flex;
 	justify-content: center;
 	background: #fbe9e7;
 }
+
 #card{
 	width: 530px;
 	height: 300px;
@@ -64,8 +66,7 @@ span:hover{
 }
 
 /* 响应式布局 */
-/* PC */
-@media screen and (max-width: 750px){
+@media only screen and (max-width: 700px){
 	#card{
 		width: 480px;
 		height: 400px;
@@ -82,12 +83,14 @@ span:hover{
 		border-radius: 10px;
 	}
 }
-/* 全面屏 */
-@media screen and (min-width: 1080px) and (min-height: 2400px){
+
+@media only screen and (max-width: 1020px){
 	#card{
-		width: 480px;
-		height: 400px;
-		transform: translate(0, 15%);
+		top: 150px;
+		font-size: 2em;
+		width: 680px;
+		height: 600px;
+		transform: translate(0, 75%);
 	}
 	#icon{
 		width: 100%;
@@ -98,14 +101,21 @@ span:hover{
 		height: 85%;
 		float: right;
 		border-radius: 10px;
+	}
+	[type=icon_index]{
+		width: 70px;
+		height: 70px;
+		bottom: 20px;
+		transition: .15s;
 	}
 }
-/* 标准 */
-@media screen and (min-width: 1080px) and (min-height: 1920px){
+@media only screen and (max-width: 1280px) and (max-height: 1024px){
 	#card{
-		width: 480px;
-		height: 400px;
-		transform: translate(0, 120%);
+		top: 450px;
+		font-size: 2em;
+		width: 680px;
+		height: 600px;
+		transform: translate(0, 75%);
 	}
 	#icon{
 		width: 100%;
@@ -116,5 +126,11 @@ span:hover{
 		height: 85%;
 		float: right;
 		border-radius: 10px;
+	}
+	[type=icon_index]{
+		width: 70px;
+		height: 70px;
+		bottom: 20px;
+		transition: .15s;
 	}
 }
