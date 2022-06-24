@@ -5,28 +5,31 @@
 	<title>sql 答案</title>
 	<style>
 		*{margin: 0;padding: 0;}
+		::-webkit-scrollbar{
+			width: 10px;
+			height: 20px;
+			background: #2d3748;
+		}
+		::-webkit-scrollbar-thumb{
+			background: darkcyan;
+			border-radius: 10px;
+		}
 		body{
 			font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 			background: #1a202c;
-			display: flex;
-			justify-content: center;
 		}
 		table{
 			border: 1px black solid;
 			border-collapse: collapse;
+			text-align: center;
 			color: aliceblue;
 			background: #2d3748;
 			counter-reset: section;
 		}
 		td{
-			width: 900px;
 			height: 2em;
 			border: 1px black solid;
-			text-align: center;
 			padding: 0 10px 0;
-		}
-		td:first-child{
-			width: auto;
 		}
 		tr:before{
 			counter-increment: section;

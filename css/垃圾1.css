@@ -1,8 +1,4 @@
-*{margin: 0;padding: 0;box-sizing: border-box;}
-*::selection{color: salmon;background-color: rgba(30, 152, 212, .8);}
+*{margin: 0;padding:0;box-sizing: border-box;}
 body{
-	font-family: Arial;
-	padding: 50px 15% 0;
-	background: #3d4554;
-	min-width: 1187px;
+	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 }
