@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>开关按钮_div_js</title>
+		<style>
+			*{margin: 0;padding:0;box-sizing: border-box;}
+			body{
+				background: var(--darkMode-body-bg, white);
+				font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+			}
+			body.darkMode{
+				--darkMode-body-bg: black;
+				--darkMode-switch-bg: black;
+				--darkMode-switch-border: white;
+				--darkMode-silder-bg: white;
+				--darkMode-silder-translatex: 120%;
+			}
+			#switch{
+				width: 60px;
+				height: 34px;
+				background: var(--darkMode-switch-bg, white);
+				display: inline-block;
+				border: 1.5px var(--darkMode-switch-border, black) solid;
+				border-radius: 50px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+			}
+			#slider{
+				width: 20px;
+				height: 20px;
+				background: var(--darkMode-silder-bg, black);
+				position: relative;
+				left: 10%;
+				border-radius: 50px;
+				transition: .2s;
+				transform: translateX(var(--darkMode-silder-translatex, 0%));
+			}
+		</style>
+	</head>
+	<body>
+		<div id="switch" onclick="switchBtn()">
+			<div id="slider">
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	function switchBtn(){
+		// contains 判断当body有'darkMode'这个class类
+		var body = document.body.classList;
+		if(body.contains('darkMode')){
+			body.remove('darkMode');
+		}
+		else{
+			body.add('darkMode');
+		}
+	}
+</script>

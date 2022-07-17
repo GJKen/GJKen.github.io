@@ -1,4 +1,44 @@
 *{margin: 0;padding:0;box-sizing: border-box;}
 body{
 	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+.switch{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	text-align: left;
+}
+.switch input{display:none;}/* 清除 input 标签的属性 */
+
+.slider{
+	position: absolute;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background: #ccc;
+	transition: .2s;
+	border-radius: 50px;
+}
+/* 点击后更改背景颜色 */
+input:checked + .slider{
+	background: #2196F3;
+}
+.slider:before{
+	content: "";
+	position: absolute;
+	height: 26px;
+	width: 26px;
+	background: white;
+	/* 控制内部按钮外边距 */
+	margin: 4px;
+	border-radius: 50px;
+	transition: .2s;
+}
+/* 点击后 x 轴移动 26px */
+input:checked + .slider:before{
+	transform: translateX(26px);
 }
