@@ -5,63 +5,22 @@
 		<title>开关按钮_div_js</title>
 		<style>
 			*{margin: 0;padding:0;box-sizing: border-box;}
+			::selection{
+				color: rgba(0, 0, 0, 0.1);
+			}
 			body{
-				background: var(--darkMode-body-bg, white);
+				background: white;
 				font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 			}
-			body.darkMode{
-				--darkMode-body-bg: black;
-				--darkMode-switch-bg: black;
-				--darkMode-switch-border: white;
-				--darkMode-silder-bg: white;
-				--darkMode-silder-translatex: 120%;
-			}
-			#switch{
-				width: 60px;
-				height: 34px;
-				background: var(--darkMode-switch-bg, white);
-				display: inline-block;
-				border: 1.5px var(--darkMode-switch-border, black) solid;
-				border-radius: 50px;
-				position: relative;
-				display: flex;
-				align-items: center;
-				cursor: pointer;
-			}
-			#slider{
-				width: 20px;
-				height: 20px;
-				background: var(--darkMode-silder-bg, black);
-				position: relative;
-				left: 10%;
-				border-radius: 50px;
-				transition: .2s;
-				transform: translateX(var(--darkMode-silder-translatex, 0%));
-			}
+			p:active{color: red;}
 		</style>
 	</head>
 	<body>
-		<p id="DandN" onclick="switchBtn()">Light</p>
-		<div id="switch" onclick="switchBtn()">
-			<div id="slider">
-			</div>
+		<div id="dy1">
+			<p>点击领取</p>
+		</div>
+		<div id="dy1">
+			<p>点击领取</p>
 		</div>
 	</body>
 </html>
-<script>
-	function switchBtn(){
-		// contains 判断当body有'darkMode'这个class类
-		var body = document.body.classList;
-		var text = document.getElementById('DandN');
-		if(body.contains('darkMode')){
-			body.remove('darkMode');
-			text.style.color = 'black'
-			text.innerText = 'Light';
-		}
-		else{
-			body.add('darkMode');
-			text.innerText = 'Night';
-			text.style.color = 'white'
-		}
-	}
-</script>
