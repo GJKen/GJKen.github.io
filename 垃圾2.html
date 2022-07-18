@@ -12,15 +12,24 @@
 				background: white;
 				font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
 			}
-			button:active{color: red;}
+			p:active{color: red;}
 		</style>
 	</head>
 	<body>
-		<div id="dy1">
-			<button>点击领取</button>
+		<div>
+			<p id="dy1" onclick="control()">点击领取</p>
 		</div>
-		<div id="dy1">
-			<button>点击领取</button>
+		<br>
+		<div id="dy2" onclick="control2()">
+			<p>点击领取</p>
 		</div>
 	</body>
+	<script>
+		function control(){
+			alert('领取1')
+		}
+		function control2(){
+			alert('领取2')
+		}
+	</script>
 </html>
