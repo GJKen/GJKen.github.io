@@ -1,0 +1,117 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+::selection{color: beige;background-color: black;}
+body{
+	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fbe9e7;
+	transition: .3s;
+}
+
+#card{
+	width: 530px;
+	height: 300px;
+	min-width: 530px;
+	min-height: 300px;
+	padding: 20px 0;
+	background: white;
+	overflow: hidden;
+	display: flex;
+	/* 右偏移 下偏移 发散 rbga控制透明度*/
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
+	transition: .4s infinite;
+	border-radius: 20px;
+}
+#nav-icon{
+	width: 12%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+	transition: .6s;
+}
+.active{
+	transition: .1s;
+	border-right: 4px solid;
+	border-color: none;
+}
+#nav-icon li{
+	height: 100%;
+	margin: 5px 0;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+#nav-icon li a{
+	display: flex;
+}
+#icon{
+	font-size: 40px;
+	fill: #e21212;
+}
+/* #icon-hover{
+	width: 0.5%;
+	height: 50px;
+	background-image: linear-gradient(to bottom,
+		rgba(0, 0, 0, 0), rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	border-radius: 50px;
+} */
+
+#content{
+	width: 88%;
+	padding: 10px;
+	background: white;
+	border-radius: 10px;
+}
+.hello>h3{
+	font-family: sans-serif;
+	text-align: center;
+	margin: 10px 0 20px 0;
+	transition: .2s;
+}
+.hello>h3:hover{color: #e21212;}
+.hello>p{
+	margin: 0 10px 0 10px;
+	text-indent: 2em;
+}
+span{
+	color: palevioletred;
+	opacity: 0;
+	transition: .18s;
+}
+span:hover{
+	opacity: 1;
+	transition: .5s;
+	cursor: pointer;
+}
+
+/* 响应式布局 */
+/* @media screen and (max-width: 1080px){
+	body{font-size: 2em;}
+	#card{
+		width: 60%;
+		height: 20%;
+		display: block;
+	}
+	#icon{
+		flex-wrap: wrap-reverse;
+		width: 100%;
+		height: 20%;
+	}
+	#icon:hover{
+		transition: .2s;
+		box-shadow: 0 -3px 12px rgba(0, 0, 0, .2);
+	}
+	#content{
+		width: 100%;
+	}
+	[type=icon_index]{
+		width: 70px;
+		height: 70px;
+		bottom: 20px;
+		transition: .15s;
+	}
+} */

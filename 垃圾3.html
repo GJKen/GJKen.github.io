@@ -1,47 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>冲</title>
-    <script src="https://huodong2.4399.com/js/zepto/zepto.js"></script>
-    <script src="https://huodong2.4399.com/comm/qdlb/v6/js/base.js"></script>
-    <script src="https://huodong2.4399.com/comm/qdlb/v6/js/mpage_e8.js"></script>
-	<script type = "text/javascript">
-		Client.env.platform = 'android';
-		Client.env.isClient = 1;
-		Ajax.scookie = unescape("***")
-		//Ajax.scookie = unescape("这里填scookie参数")//必填项
-		var deviceid = "***";
-		//var deviceid = "这里填deviceid参数"//必填项
-		Ajax.hdid = 22;
-		var id;
-	</script>
+	<meta charset="UTF-8">
+	<title>冲</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		div{
+			width: 80px;
+			height: 350px;
+			background: pink;
+			border: 2px solid black;
+		}
+	</style>
 </head>
-<body onload="start()">
-<button type="button" onclick="stop()">STOP</button>
-<script type = "text/javascript">
-    function start() {
-        id = setInterval(login, 40)//开始循环发包
-    }
-    function stop() {
-        clearInterval(id)
-    }
-    function login(){
-        Ajax.post('https://huodong2.4399.com/comm/qdlb/ajax_e2.php',
-            {
-                ac:'prizeRand',
-                rand:Math.random(),
-                device:deviceid,
-                days:31,//这里填要抢的奖品日期
-                c:"",
-                hdid:Ajax.hdid
-            },
-            function (data) {
-            document.getElementById("31msg").innerHTML = unescape(data.msg)
-            //$('#myDiv').append("<div>"+unescape(data.msg)+"</div>")
-        })
-    }
-</script>
-<div id="31msg"><h3></h3></div>
-</body>
+	<body>
+		<div id="test" onclick="demo()">
+			文本测试
+		</div>
+	</body>
+	<script>
+		function demo(){
+			var a = document.getElementById('test');
+			a.style.borderColor = 'red'
+		}
+	</script>
 </html>
