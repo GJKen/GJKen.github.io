@@ -78,6 +78,7 @@ body{
 	text-indent: 2em;
 }
 span{
+	user-select: none;
 	color: palevioletred;
 	opacity: 0;
 	transition: .18s;
