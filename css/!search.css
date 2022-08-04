@@ -134,15 +134,3 @@ body{
 	bottom: 0;
 }
 #footer:hover{box-shadow: 0px -10px 15px rgba(0,106,106, .5);transition: .2s;}
-
-
-
-	width: 46px;
-	position: fixed;
-	background: #2d3748;
-	/* 控制图标背景位置 */
-	right: 0px;
-	bottom: 30%;
-	border-radius: 10px 0 0 10px;
-	box-shadow: 0px 0px 5px black;
-	z-index: 9;

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>v2rayNg信息to直连配置</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_17022_11.e3fe013ea47de9daefdee4a686aa1098.js"></script>
+	<link rel="icon" href="../img/avatar/navIndex.png">
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+		body{background: #2d3748;text-align: center;color: white;}
+		#all{
+			width: auto;
+			min-width: 470px;
+			height: auto;
+			padding: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #1a202c;
+			border-radius: 10px;
+		}
+		textarea{
+			color: white;
+			width: 560px;
+			height: 200px;
+			background: #2d3748;
+			border: 1.3px solid #1ba035;
+			border-radius: 10px;
+		}
+		textarea:active{border: 2px solid #006a6a;}
+		#submit{border-radius: 5px;margin-top: 20px;}
+		#fixed_btn{
+			height: 60px;
+			position: fixed;
+			background: #2d3748;
+			padding: 8px 0;
+			/* 控制图标背景位置 */
+			right: 0px;
+			bottom: 30%;
+			border-radius: 10px 0 0 10px;
+			box-shadow: 0px 0px 5px black;
+			z-index: 9;
+			transition: .2s;
+			transform: translate(71%, 0);
+		}
+		#fixed_btn:hover{transform: translate(50%, 0);}
+		#fixed_btn ul li{
+			width: 160px;
+			float: left;
+			transition: .2s;
+			list-style: none;
+			transform: translate(3%, 0);
+		}
+		#fixed_btn ul li:hover{
+			background: #2d3748;
+			border-radius: 10px 0 0 10px;
+			box-shadow: 0px 0px 5px black;
+			transform: translate(-45%, 0);
+		}
+		#fixed_btn ul li a{
+			width: 100%;
+			color: white;
+			text-decoration: none;
+			display: flex;
+		}
+		#fixed_btn ul li p{
+			display: inline-flex;
+			margin-left: 2px;
+			transform: translate(0, 4%);
+		}
+		#icon{font-size: 40px;}
+	</style>
+</head>
+<body>
+	<div id="all">
+		<div>
+			<p>此工具用来提取被 v2rayNg 代理(prixy)的域名<br />可全部复制 v2rayNg 软件下面的信息然后粘贴到输入框里<br>可直接生成直连的 domain 配置</p>
+		</div>
+		<div>
+			<p>输入</p>
+			<textarea id="inputtxt" name="inValue" spellcheck="false"></textarea>
+		</div>
+		<div>
+			<p>输出</p>
+			<textarea id="outputtxt" name="outValue" spellcheck="false"></textarea>
+		</div>
+		<button id="submit" type="submit">提交</button>
+	</div>
+	<div id="fixed_btn">
+		<ul>
+			<li>
+				<a href="../index.html"><iconpark-icon id="icon" name="home"></iconpark-icon><p>返回主页</p></a>
+			</li>
+		</ul>
+	</div>
+</body>
+<script>
+	var inputtxt = document.getElementById('inputtxt');
+	var outputtxt = document.getElementById('outputtxt');
+	var submit = document.getElementById('submit');
+	submit.addEventListener("click",()=>{
+		let result = inputtxt.value.split(' ');
+		// 获取三级域名
+		var domainarr = [''];
+		var OutTxt = '';
+		for(let i = 0; i < result.length; i++){
+			// 搜索 proxy 字符串, 并判断返回值
+			let result2 = result[i].search('[proxy]');
+			if(result2 == 1){
+				var domainThird = (result[i-1].split(':'))[1];
+				if(domainThird == undefined){continue;}
+				// 判断域名是否重复1
+				for (let j = 0; j < i; j++){
+					// 如果循环到未定义的位置则添加进去
+					if(domainarr[j] == undefined){
+						domainarr.push(domainThird);
+						break;
+					}
+					// 如果相同则结束循环
+					else if(domainarr[j] == domainThird){break;}
+				}
+			}
+		}
+		var regPoint = /\./;
+		var domainTmp = [''];
+		for(let x = 1; x < domainarr.length; x++){
+			let domainLast = domainarr[x].split('.').slice(-2);
+			let Point = domainarr.indexOf("\.");
+			// 如果末尾为数字则跳过
+			if(/[0-9]/.test(domainLast[1])){continue;}
+			// 如果末尾为英文则查重
+			else if(/[A-z]/.test(domainLast[1])){
+				let domain = domainLast[0] +'.'+ domainLast[1];
+				for(let y = 0; y < 2; y++){
+					// 判断域名是否存在 domainTmp
+					if(!(domainTmp.includes(domain))){
+						domainTmp.push(domain);
+						outputtxt.value += 'domain:' + domain + ',\n'
+					}
+					break;
+			} }
+		}
+	})
+</script>
+</html>
