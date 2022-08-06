@@ -10,6 +10,7 @@
 		*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
 		body{background: #2d3748;text-align: center;color: white;}
 		#all{
+			user-select: none;
 			width: auto;
 			min-width: 470px;
 			height: auto;
@@ -21,6 +22,7 @@
 			background: #1a202c;
 			border-radius: 10px;
 		}
+		#all>:first-child{user-select: text;}
 		textarea{
 			color: white;
 			width: 560px;
@@ -30,8 +32,17 @@
 			border-radius: 10px;
 		}
 		textarea:active{border: 2px solid #006a6a;}
-		#submit{border-radius: 5px;margin-top: 20px;}
+		#submit{
+			width: 10%;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 20px;
+			background: #006a6a;
+			border-radius: 5px;
+		}
+		#submit:active{background: #005252;}
 		#fixed_btn{
+			user-select: none;
 			height: 60px;
 			position: fixed;
 			background: #2d3748;
@@ -86,7 +97,7 @@
 			<p>输出</p>
 			<textarea id="outputtxt" name="outValue" spellcheck="false"></textarea>
 		</div>
-		<button id="submit" type="submit">提交</button>
+		<div id="submit" type="submit">提交</div>
 	</div>
 	<div id="fixed_btn">
 		<ul>
@@ -105,6 +116,7 @@
 		// 获取三级域名
 		var domainarr = [''];
 		var OutTxt = '';
+		outputtxt.value = ''
 		for(let i = 0; i < result.length; i++){
 			// 搜索 proxy 字符串, 并判断返回值
 			let result2 = result[i].search('[proxy]');

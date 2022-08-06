@@ -4,6 +4,9 @@ var bodyStyle = document.body.style;
 var list = document.querySelectorAll('.list');
 list.forEach(elements =>{
 	elements.addEventListener('mouseenter',(event)=>{
+		/*//获取svg的颜色
+		let path = event.target.querySelector("#icon").shadowRoot.querySelector("path");
+		let color = getComputedStyle(path, null).stroke;*/
 		let color = event.target.dataset.color;
 		let style = event.target.style;
 		style.borderRight = '3px solid' + color;
