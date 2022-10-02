@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>拖拽练习</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			body{background: #2d3748;color: white;text-align: center;}
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: rgba(255,255,255,0.5);
+				top: 30%;
+				left: 50%;
+				border: aquamarine 1px solid;
+				position: absolute;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				top: 32%;
+				right: 50%;
+				background: black;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<p>这是一段文字</p>
+	</body>
+</html>
+<script>
+	var div1 = document.getElementById('div1');
+	var div2 = document.getElementById('div2');
+	function drag(obj){
+		// 封装到函数里
+		obj.onmousedown = function(e){
+			// 鼠标在div里面绑定点击
+			console.log('鼠标点下')
+			// 当鼠标点击,计算鼠标X轴减去元素Left的距离
+			var PL = e.clientX - obj.offsetLeft;
+			var PT = e.clientY - obj.offsetTop;
+			document.onmousemove = function(e){
+				// 鼠标在页面绑定移动
+				console.log('鼠标移动')
+				// 前面计算好偏移的距离后 再用鼠标的坐标减去偏移量得出移动元素后鼠标的位置
+				var left = e.clientX - PL;
+				var right = e.clientY - PT;
+				obj.style.left = left + 'px';
+				obj.style.top = right + 'px';
+			}
+			document.onmouseup = function(){
+				// 给document绑定鼠标松开事件,防止移动元素时被别的元素挡住而无法松开鼠标
+				// 当触发onmouseup事件,取消document页面移动
+				document.onmousemove = null;
+				// 当取消document页面移动,后同时也取消document.onmouseup,防止过多无用函数触发
+				document.onmouseup = null;
+			}
+			/*
+			 当我们拖拽一个网页中的文字内容时,浏览器会默认去搜索引擎中搜索内容,
+			 此时会导致拖拽功能的异常,这是浏览器提供的默认行为,
+			 如果不希望发生这个行为,则可以通过return false;来取消默认行为
+			*/
+		return false;
+		}
+	}
+	drag(div1);
+	drag(div2);
+</script>

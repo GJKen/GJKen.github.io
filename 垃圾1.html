@@ -15,7 +15,39 @@
 		</style>
 	</head>
 	<body>
-		<p id="demo">去除后效果</p>
+		<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+		<video id="video-id"><source src="E:\!Anime\Tsubasa RESERVoir CHRoNiCLE (2005) [BD 1080p HEVC OPUS_AAC] [Dual-Audio] [V2]\Season 2\Tsubasa RESERVoir CHRoNiCLE (2005) - S02E13 - The Beginning of Seperation.mkv" type="video/mkv" />
+		<script>
+		    var myFP = fluidPlayer(
+		        'video-id',	{
+			"layoutControls": {
+				"controlBar": {
+					"autoHideTimeout": 3,
+					"animated": true,
+					"autoHide": true
+				},
+				"htmlOnPauseBlock": {
+					"html": null,
+					"height": null,
+					"width": null
+				},
+				"autoPlay": false,
+				"mute": true,
+				"allowTheatre": true,
+				"playPauseAnimation": false,
+				"playbackRateEnabled": false,
+				"allowDownload": false,
+				"playButtonShowing": false,
+				"fillToContainer": false,
+				"posterImage": ""
+			},
+			"vastOptions": {
+				"adList": [],
+				"adCTAText": false,
+				"adCTATextPosition": ""
+			}
+		});
+		</script>
 	</body>
 	<script>
 	</script>

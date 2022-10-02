@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>课程表</title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{
+			font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+			font-size: 20px;
+			color: white;
+			background: #2d3748;
+			display: flex;
+			justify-content: center;
+		}
+		#cneter{
+			
+			padding-top: 100px;
+		}
+		table{
+			border: 1px black solid;
+			border-collapse: collapse;
+		}
+		td{
+			width: 10em;
+			height: 5em;
+			padding: 8px;
+			border: 1px black solid;
+			text-align: center;
+		}
+		p{color: #da8d28;}
+		#day{color: #d7d7d7;}
+	</style>
+	<body>
+		
+		<div id="cneter">
+			<table>
+				<tr id="day">
+					<td>时间/星期</td>
+					<td>星期一</td>
+					<td>星期二</td>
+					<td>星期三</td>
+					<td>星期四</td>
+					<td>星期五</td>
+				</tr>
+				<tr>
+					<td>1 , 2节<br><b>8:00-8:45</b><br><b>8:55-9:40</b></td>
+					<td>无</td>
+					<td>
+						<p>体育课</p>(单周)<br><br>
+						<p>职业发展与就业指导</p>教404<br>(双周)
+					</td>
+					<td rowspan="2"><p>网页UI设计</p>科208</td>
+					<td><p>网站建设与管理</p>科208</td>
+					<td rowspan="2"><p>小程序开发</p>科208</td>
+				</tr>
+				<tr>
+					<td>3 , 4节<br><b>10:00-10:45</b><br><b>10:55-11:40</b></td>
+					<td><p>工程绘图</p>综803<br></td>
+					<td><p>国家安全教育</p>(单周)</td>
+					<td>无</td>
+				</tr>
+				<tr>
+					<td colspan="6" style="background: #484f58;"><p>午休 11:40-14:10</p></td>
+				</tr>
+				<tr>
+					<td>5 , 6节<br><b>14:30-15:15</b><br><b>15:25-16:10</b></td>
+					<td><p>工程绘图</p>综803<br></td>
+					<td><p>网站建设与管理</p>科208</td>
+					<td rowspan="2">无</td>
+					<td rowspan="2"><p>Excel 数据分析</p>科206</td>
+					<td rowspan="2">无</td>
+				</tr>
+				<tr>
+					<td>7 , 8节<br><b>16:20-17:05</b><br><b>17:15-18:00</b></td>
+					<td>无</td>
+					<td><p>形式与政策</p>(单周)<br>综303</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

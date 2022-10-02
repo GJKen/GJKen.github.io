@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 获取鼠标x和y轴</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			body{background: #2d3748;color: white;}
+			#coordinate{
+				width: 650px;
+				height: 600px;
+				margin: 50px auto;
+				border: 2px solid blanchedalmond;
+				text-align: center;
+			}
+			#showDiv{
+				width: 300px;
+				height: auto;
+				margin: 50px auto;
+				border: 2px solid blanchedalmond;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color: red;text-align: center;">此案例展示获取鼠标在 #pact ID 的x和y轴的数值</p>
+		<div id="coordinate">
+		</div>
+		<div id="showDiv">
+			<p>x轴为:</p><br>
+			<p>y轴为:</p>
+		</div>
+	</body>
+	<script>
+		var coordinate = document.getElementById('coordinate');
+		var showDiv = document.getElementById('showDiv');
+		window.onload = function(){
+			coordinate.addEventListener('mousemove',(event)=>{
+				// 设置变量获取鼠标x和y的坐标 client是获取浏览器可见窗口的坐标
+				let left = event.clientX;
+				let right = event.clientY;
+				showDiv.firstElementChild.innerHTML = 'x轴为:'+ left;
+				showDiv.lastElementChild.innerHTML = 'y轴为:'+ right;
+			})
+		}
+	</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 监控滚动条</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			body{background: #2d3748;text-align: center;color: white;}
+			#pact{
+				width: 650px;
+				height: 600px;
+				margin: 50px auto;
+				overflow: auto;
+			}
+			#enterPact{
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color: red;">此案例展示滚动条到底时 input 标签为 false</p>
+		<div id="pact">
+			<p>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+				请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议 请阅读完许可协议<br>
+			</p>
+		</div>
+		<input id="enterPact" class="enterSubmit" type="checkbox" disabled="disabled">我已阅读并确认以上协议
+		<input class="enterSubmit" type="submit" disabled="disabled" value="确定">
+		<div id="getNum" disabled="disabled">log信息</div>
+	</body>
+	<script>
+		var enterPact = document.getElementsByClassName('enterSubmit');
+		// let enterPact = document.getElementsByTagName('input');
+		window.onload = function(){
+			let getNum = document.getElementById('getNum')
+			let enterSubmit = document.getElementsByClassName('enterSubmit');
+			let pact = document.getElementById('pact');
+			getNum.onclick = function(){
+				console.log('滚动条高度(scrollHeight):'+ pact.scrollHeight);
+				console.log('滚动条已经移动的数值(scrollTop):'+ pact.scrollTop);
+				// 可以发现滚动条高度-滚动条已经移动的数值接近显示的数值, 那么四舍五入把它放到判断里,
+				// 同理水平滚动条判断就把 Height 换成 Width 反过来就行
+				console.log(Math.round(pact.scrollHeight - pact.scrollTop));
+			}
+			// 添加滚动条事件
+			pact.onscroll = function(){
+				// 判断是否滚动到底
+				if(Math.round(pact.scrollHeight - pact.scrollTop) == pact.clientHeight){
+					enterPact[0].disabled = false;
+					enterPact[1].disabled = false;
+				}
+			}
+		}
+	</script>
+</html>
