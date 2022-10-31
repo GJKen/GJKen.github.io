@@ -45,20 +45,19 @@
 	</body>
 	<script>
 		var enterPact = document.getElementsByClassName('enterSubmit');
-		// let enterPact = document.getElementsByTagName('input');
 		window.onload = function(){
 			let getNum = document.getElementById('getNum')
 			let enterSubmit = document.getElementsByClassName('enterSubmit');
 			let pact = document.getElementById('pact');
 			getNum.onclick = function(){
 				console.log('滚动条高度(scrollHeight):'+ pact.scrollHeight);
-				console.log('滚动条已经移动的数值(scrollTop):'+ pact.scrollTop);
-				// 可以发现滚动条高度-滚动条已经移动的数值接近显示的数值, 那么四舍五入把它放到判断里,
+				console.log('滚动条已移动的数值(scrollTop):'+ pact.scrollTop);
+				// 可以发现滚动条高度减去滚动条已移动的数值接近显示的数值, 那么四舍五入把它放到判断里,
 				// 同理水平滚动条判断就把 Height 换成 Width 反过来就行
 				console.log(Math.round(pact.scrollHeight - pact.scrollTop));
 			}
-			// 添加滚动条事件
 			pact.onscroll = function(){
+				// 添加滚动条事件
 				// 判断是否滚动到底
 				if(Math.round(pact.scrollHeight - pact.scrollTop) == pact.clientHeight){
 					enterPact[0].disabled = false;

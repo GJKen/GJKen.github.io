@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 获取鼠标x和y轴</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			body{background: #2d3748;color: white;}
+			#coordinate{
+				width: 350px;
+				height: auto;
+				margin: 50px auto;
+				border: 2px solid blanchedalmond;
+				text-align: center;
+			}
+			#showDiv{
+				width: 300px;
+				height: auto;
+				margin: 50px auto;
+				border: 2px solid blanchedalmond;
+			}
+			#moveDiv{
+				width: 200px;
+				height: auto;
+				background: rgba(255,255,255,0.5);
+				/* top: 50%; */
+				right: 50%;
+				border: aquamarine 1px solid;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color: red;text-align: center;">此案例展示获取鼠标在 #pact ID 的x和y轴的数值</p>
+		<div id="coordinate">
+		<input type="text" id="inputtxt">
+		<div id="showDiv">
+			<p style='color: red'>在输入框按下按键</p>
+			<p>按下的键值为:当前未按下</p>
+		</div>
+		</div>
+		<div id="moveDiv">尝试使用上下左右移动</div>
+	</body>
+	<script>
+		window.onload = function(){
+			let coordinate = document.getElementById('coordinate');
+			let inputtxt = document.getElementById('inputtxt');
+			let showDiv = document.getElementById('showDiv');
+			let moveDiv = document.getElementById('moveDiv');
+			inputtxt.onkeydown = function(e){
+				showDiv.lastElementChild.innerHTML = '按下的键值为:'+ e.keyCode;
+			}
+			// 还可以用键值之间的范围判断是否为数字, 达到用户无法输入数字的效果 return false;, 这里不展示了
+			document.onkeydown = function(e){
+				let speed = 10;
+				if(e.ctrlKey){
+					speed = 40;
+				}
+				switch(e.keyCode){
+					case 37:moveDiv.style.left = moveDiv.offsetLeft - speed + 'px';break;
+					case 39:moveDiv.style.left = moveDiv.offsetLeft + speed + 'px';break;
+					case 38:moveDiv.style.top = moveDiv.offsetTop - speed + 'px';break;
+					case 40:moveDiv.style.top = moveDiv.offsetTop + speed + 'px';break;
+				}
+			};
+		}
+	</script>
+</html>

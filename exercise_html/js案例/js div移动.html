@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js div移动</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			body{background: #2d3748;color: white;}
+			#coordinate{
+				width: 350px;
+				height: auto;
+				margin: 50px auto;
+				border: 2px solid blanchedalmond;
+				text-align: center;
+			}
+			#moveDiv{
+				width: 200px;
+				height: auto;
+				background: rgba(255,255,255,0.5);
+				right: 50%;
+				border: aquamarine 1px solid;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color: red;text-align: center;">Div移动案例<br>取消div移动初速</p>
+		<div id="moveDiv">尝试使用上下左右移动 ctrl加速</div>
+	</body>
+	<script>
+		window.onload = function(){
+			var moveDiv = document.getElementById('moveDiv');
+			// 设置speed变速器
+			var speed = 1;
+			// 设置pos变量 给下面switch判断方向
+			var pos;
+			document.onkeydown = function(e){
+				// 监控键盘按键 赋值给pos
+				pos = e.keyCode
+				// 监控按键按下函数
+				if(e.ctrlKey){
+					// 鼠标按下ctrl
+					speed = 20;
+				}else{
+					// 松开ctrl则代表false
+					speed = 8;
+				}
+			};
+			var timer = setInterval(function(){
+				// 设置定时器 取消div移动初速
+				switch(pos){
+					case 37:moveDiv.style.left = moveDiv.offsetLeft - speed + 'px';break;;
+					case 39:moveDiv.style.left = moveDiv.offsetLeft + speed + 'px';break;
+					case 38:moveDiv.style.top = moveDiv.offsetTop - speed + 'px';break;
+					case 40:moveDiv.style.top = moveDiv.offsetTop + speed + 'px';break;
+				}
+			},10);
+			document.onkeyup = function(){pos=0;};
+		}
+	</script>
+</html>

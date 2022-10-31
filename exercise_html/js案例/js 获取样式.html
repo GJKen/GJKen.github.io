@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 获取样式</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;font-size: 25px;font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;}
+			body{background: #2d3748;color: white;}
+			#coordinate{
+				width: 350px;
+				height: auto;
+				margin: 50px auto;
+				border: 2px solid blanchedalmond;
+				text-align: center;
+			}
+			#demo{
+				width: auto;
+				height: auto;
+				padding: 10px;
+				background: rgba(255,255,255,0.5);
+				right: 50%;
+				border: aquamarine 1px solid;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color: red;text-align: center;">获取元素sytle案例</p>
+		<div id="demo">测试div<br>点我获取样式</div>
+	</body>
+	<script>
+		/*
+			获取元素当前显示的样式getComputedStyle(), 需要2个参数
+			第一个参数写要获取的元素,第二个写伪元素,一般传null
+			如果元素样式设为auto, getComputedStyle获取的值为实际显示的数值
+			获取的值为只读,修改只能通过style属性
+		*/
+		window.onload = function(){
+			var demo = document.getElementById('demo');
+			var obj = getComputedStyle(demo,null)
+			function getStyle(obj, name){
+				return getComputedStyle(obj, null)[name];
+			}
+			demo.onclick = function(){
+				alert(obj.width)
+				alert(getStyle(demo,'backgroundColor'))
+			}
+		}
+	</script>
+</html>
