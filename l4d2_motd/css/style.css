@@ -1,0 +1,20 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+::selection{
+	color: #ffff00;
+	background: #4ec7ff;
+}
+body{
+	background: black;
+	color: white;
+	font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+.div{
+	margin: 0 auto;
+}
+code{
+	font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+a{
+	color: #1890ff;
+	text-decoration: none;
+}

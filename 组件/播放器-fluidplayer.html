@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>垃圾1</title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;}
+			::selection{
+				color: rgba(0, 0, 0, 0.1);
+			}
+			body{
+				background: white;
+				font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
+			}
+			#video{
+				position: absolute;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div><a href="https://www.fluidplayer.com" target="_blank">代码官网</a></div>
+		<div id="video"><video id="video-id"><source src="" type="video/mp4" /></div>
+	</body>
+		<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+		<script>
+		    var myFP = fluidPlayer(
+		        'video-id',	{
+			"layoutControls": {
+				"controlBar": {
+					"autoHideTimeout": 3,
+					"animated": true,
+					"autoHide": true
+				},
+				"htmlOnPauseBlock": {
+					"html": null,
+					"height": null,
+					"width": null
+				},
+				"autoPlay": false,
+				"mute": false,
+				"allowTheatre": true,
+				"playPauseAnimation": true,
+				"playbackRateEnabled": true,
+				"allowDownload": true,
+				"playButtonShowing": true,
+				"fillToContainer": false,
+				"posterImage": ""
+			},
+			"vastOptions": {
+				"adList": [],
+				"adCTAText": false,
+				"adCTATextPosition": ""
+			}
+		});
+		</script>
+</html>

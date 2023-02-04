@@ -2,53 +2,42 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>垃圾2</title>
+		<title>侧边栏练习</title>
+		<link rel="stylesheet" href="./css/垃圾1.css">
+		<script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_17022_12.fd3d3f5da1aba5cc0e15db0488b92def.js"></script>
 		<style>
-			*{margin: 0;padding: 0;box-sizing: border-box;}
-			::selection{
-				color: rgba(0, 0, 0, 0.1);
-			}
-			body{
-				background: white;
-				font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue','Helvetica','Arial',sans-serif;
-			}
 		</style>
 	</head>
 	<body>
-		<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-		<video id="video-id"><source src="E:\!Anime\Tsubasa RESERVoir CHRoNiCLE (2005) [BD 1080p HEVC OPUS_AAC] [Dual-Audio] [V2]\Season 2\Tsubasa RESERVoir CHRoNiCLE (2005) - S02E13 - The Beginning of Seperation.mkv" type="video/mkv" />
-		<script>
-		    var myFP = fluidPlayer(
-		        'video-id',	{
-			"layoutControls": {
-				"controlBar": {
-					"autoHideTimeout": 3,
-					"animated": true,
-					"autoHide": true
-				},
-				"htmlOnPauseBlock": {
-					"html": null,
-					"height": null,
-					"width": null
-				},
-				"autoPlay": false,
-				"mute": true,
-				"allowTheatre": true,
-				"playPauseAnimation": false,
-				"playbackRateEnabled": false,
-				"allowDownload": false,
-				"playButtonShowing": false,
-				"fillToContainer": false,
-				"posterImage": ""
-			},
-			"vastOptions": {
-				"adList": [],
-				"adCTAText": false,
-				"adCTATextPosition": ""
-			}
-		});
-		</script>
+		<div class="sidebar">
+			<header>
+				<div class="header-imgtxt">
+					<span><a href="./垃圾1.html"><img src="./img/avatar/navIndex.png" alt="头像" title="GJKen"></a></span>
+					<div class="header-txt">
+						<span class="name">GJKen</span>
+					</div>
+					<iconpark-icon class="header-btn" name="arrow-circle-left"></iconpark-icon>
+				</div>
+			</header>
+			<ul class="menu">
+				<li class='nav-link'>
+					<a href="#">
+						<div class="icon"><iconpark-icon name="home"></iconpark-icon></div>
+						<p>Home</p>
+					</a>
+				</li>
+				<li class='nav-link'>
+					<a href="#">
+						<div class="icon"><iconpark-icon name="home"></iconpark-icon></div>
+						<p>Home</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="home">
+			<div class="text">这里还什么都没有</div>
+		</div>
 	</body>
-	<script>
-	</script>
+	<script src="./js/垃圾1.js"></script>
+	<script src="./js/svg-inject.js"></script>
 </html>
