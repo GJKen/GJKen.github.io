@@ -1,27 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>冲</title>
-	<style>
-		*{margin: 0;padding: 0;box-sizing: border-box;}
-		div{
-			width: 80px;
-			height: 350px;
-			background: pink;
-			border: 2px solid black;
+<html>
+	<head>
+		<title>JKchan 专家多特服</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+			font-size: 20px;
+			text-align: center;
+			background: #ffaa00;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			font-family: Arial,Microsoft YaHei,sans-serif;
 		}
-	</style>
-</head>
-	<body>
-		<div id="test" onclick="demo()">
-			文本测试
+		.title{
+			text-align: center;
+			font-size: 32px;
+		}
+		hr{
+			border: 2px solid rgba(255, 255, 255, 0.58);
+		}
+		.all{
+			display: flex;
+			justify-content: center;
+		}
+		.conten{
+			margin-top: 20px;
+			background-color: rgba(89, 89, 89, 0.45);
+			backdrop-filter: blur(15.5px);
+			-webkit-backdrop-filter: blur(15.5px);
+			border: 1px solid rgba(255, 255, 255, 0.18);
+			box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+			-webkit-box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+			border-radius: 12px;
+			-webkit-border-radius: 12px;
+		}
+		code{
+			color: #fff;
+			font-family: Arial,Microsoft YaHei,sans-serif;
+		}
+		.help{
+			color: #3d4554;
+			margin-top: 50px;
+		}
+		</style>
+	 </head>
+	 <body>
+		<div class="title"><b>JKchan 专家多特服</b></div>
+		<hr>
+		<div class="all">
+			<div class="conten">
+				<p>
+					玩家指令:<br />
+					<code>!votes</code>: 投票菜单 | 重启章节 | 改难度<br />
+					<code>!maps</code>: 投票换地图 | 可更换三方图<br />
+					<code>!away</code>: 闲置<br />
+					<code>!jg</code> | <code>!join</code>: 加入游戏<br />
+					<code>!zs</code>: 自杀<br />
+					<code>!g</code>: 丢物品<br />
+				</p>
+			</div>
+		</div>
+		<div class="help">
+			<p>打不过或有问题到Telegram联系我@GJK_en</p>
 		</div>
 	</body>
 	<script>
-		function demo(){
-			var a = document.getElementById('test');
-			a.style.borderColor = 'red'
-		}
+		
 	</script>
 </html>
