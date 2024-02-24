@@ -1,0 +1,268 @@
+<html><head>
+<title>小花火组公告文界面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="网站仅用于学习交流使用">
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	::-webkit-scrollbar{
+		width: 10px;
+		height: 20px;
+		background: #ff5500;
+	}
+	::-webkit-scrollbar-thumb{
+		background: darkcyan;
+		border-radius: 10px;
+	}
+	body{
+		width: 2560;
+		font-size: 17px;
+		font-weight: bolder;
+		font-family: Arial, Microsoft YaHei, sans-serif !important;
+		background: #a18e7c;
+		overflow: hidden;
+	}
+	code{
+		color: #179cde;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style-type: disclosure-closed;
+		list-style-position: inside;
+		display: inline-block;
+	}
+	sk{
+		color: #3c39ba
+	}
+	sd{
+		color: #cb544c
+	}
+	ba{
+		color: #000000
+	}
+	red{
+		color:#ff0000
+	}
+	.title{
+		color: #F00;
+	}
+	.title_mode{
+		color: #008b8b;
+		/* padding: 0 15 0 15; */
+	}
+	.title_mode li{
+		/* padding: 5 0 5; */
+		list-style: none;
+	}
+	button{
+		width: 90;
+		height: 30;
+		background: rgba(67, 140, 191, 0.4);
+		text-decoration: none;
+		transition: .3s;
+		border: none;
+		color: #000000;
+		border-radius: 8px;
+		outline: none;
+		font-size: 17px;
+		padding: 0;
+	}
+	button.active{
+		background: rgba(43, 80, 230, 0.659);
+		pointer-events: none;
+	}
+	button:hover{
+		background: rgba(43, 80, 230, 0.659);
+		cursor: hand;
+	}
+	a{
+		color: #009daf;
+	}
+	#cmds{
+		margin-top: 10px;
+	}
+	#miandiv{
+		position: relative;
+		margin: 5;
+		padding: 10 10 0 10;
+		border-radius: 20px;
+		background: rgba(255, 255, 255, 0.702);
+		width: 22%;
+		height: 400px;
+		box-shadow: rgba(14, 14, 14, 0.149) 0px 6px 15px 15px;
+		overflow: auto;
+	}
+	#bgimg{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+	}
+	#setudiv{
+		position: absolute;
+		top: 10;
+		right: 103;
+	}
+	#setudiv #btn5{
+		width: 80;
+		margin: -5;
+		border-radius: 8px 0 0 8px;
+	}
+	#RS{
+		width: 80;
+		border-radius: 0 8px 8px 0;
+	}
+	#RS code{
+		color: #cfa6a4;
+	}
+	
+	table{
+		border: 1px black solid;
+		border-collapse: collapse;
+		color: #fff;
+		background: #2d72d280;
+		counter-reset: section;
+		/* display: none; */
+		display: table;
+	}
+	table.active{
+		display: none;
+	}
+	td{
+		text-align: justify;
+		height: 2em;
+		border: 1px #000000 solid;
+		padding: 0 10px 0;
+	}
+	tr:hover{
+		color: rgb(255, 228, 196);
+		background: rgba(106, 106, 106, 0.4);
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.102);
+	}
+</style>
+</head>
+<body>
+	<img id="bgimg" onclick="this.style.zIndex='auto'" style="z-index: auto; ">
+	<div id="miandiv" onclick="this.style.zIndex='auto'" style="z-index: auto; ">
+		<button id="btn2" onclick="ReplaceCmds(1)">本服公告</button>
+		<button id="btn1" onclick="ReplaceCmds(2)">小组公告</button>
+		<button id="btn3" onclick="ReplaceCmds(3)">其他公告</button>
+		<button id="btn4" onclick="ReplaceCmds(4)">随机涩图</button>
+		<button id="btn6" onclick="ReplaceCmds(6)">本次R18图</button>
+		<button id="btn5" onclick="ReplaceCmds(5)">隐藏此栏</button>
+		<div id="setudiv">
+	</div>
+	<div id="cmds">
+		<sd>
+			<text class="title2"><span style="font-size: 30px" <="" span="">小花火组服务器欢迎您!</span></text><br>
+			<text>本服特有指令:<br>
+			<text>服主懒得详情说明了,请自行在聊天框输入 !cmd  查看本服介绍!<br>
+			<text>加入steam小组可刷出全部服务器:<a href="https://steamcommunity.com/groups/MengHuaHuo" target="_blank">点击右下角加入此服务器组</a><br>
+			<text><sk>不想写了, 指令 !cmd 里面都有, 累了赶紧毁灭吧!</sk><br>
+	</text></text></text></text></sd></div>
+
+
+<script>
+	function ReplaceCmds(type, setu) {
+		if (type == 1) {
+			cmds.innerHTML = 
+			('\
+				<sd><text class="title2"><span style="font-size: 30px"</span>小花火组服务器欢迎您!</span></text><br />\
+				<text>本服特有指令:<br/>\
+				<text>服主懒得详情说明了,请自行在聊天框输入 !cmd  查看本服介绍!<br/>\
+				<text>加入steam小组可刷出全部服务器:<a href="https://steamcommunity.com/groups/MengHuaHuo"target="_blank">点击右下角加入此服务器组</a><br/>\
+				<text><sk>不想写了, 指令 !cmd 里面都有, 累了赶紧毁灭吧!</sk><br/>\
+			')
+		}
+		else if (type == 2) {
+			cmds.innerHTML = 
+			('\
+			<red>\
+				欢迎求生之路的各位亲朋好友<br>\
+				组服务器为公开公益服<br>\
+				即使选择的是 “仅限好友” 或 “私人游戏”<br>\
+				其他玩家仍能加入此服务器<br>\
+				请勿滥用投票踢人!发现恶意行为可加Q群反馈</red><br/>\
+			Steam小组提供的服务器模式:<br/><sk>\
+				★ 纯净战役<br/>\
+				★ 纯净多特战役<br/>\
+				★ 无限火力战役<br/>\
+				★ 商店多特战役<br/>\
+				★ 写实多特战役<br/>\
+				★ 舞蹈娱乐服<br/>\
+				★ Anne药役<br/>\
+				★ ZoneMod药抗</sk><br/>\
+			常见问题:<br/>\
+				1.如何进入服务器游玩?<br/>\
+					<sk>点击加入本组，即可在游戏界面大厅的右下角处出现本组所有的服务器。</sk><br/>\
+				2.这么久还没人来?<br/>\
+					<sk>根据首个进服玩家Steam设置的 “下载地区” 来优先匹配相近地区玩家。<br>半天没人可更换下载地区到人多的地方如上海、广州, 甚至是外区。</sk><br/>\
+				3.有时候只有4个人?<br/>\
+					<sk>大厅空位数决定匹配加入的人数, 请携带8人大厅mod, 谢谢!</sk><br/>\
+				4.更多有关服务器和插件相关问题可进群问大佬。<br/>\
+			其他:<br/>\
+				1.提供公益服务器不易, 且行且珍惜。<br/>\
+				2.愿意支持几块钱也好, 服主能这点小钱买点小零食吃吃, 快乐几天。<br/>\
+				3.特别鸣谢服务器出资人:<br/>\
+					<sk>炛、逸少诺、清醒梦、白给雌小鬼、IA、Prince Eltharion、墨殇、<br>古明地小石、开枪装装样子、我亲爱的偏执狂、霍霍的脚真香。</sk><br/>\
+			')
+		}
+		else if (type == 3) {
+			cmds.innerHTML = 
+			('\
+				<p class="title_mode">可以使用指令!v更改服务器功能设置。<br></p>\<ul>\</li>\
+				<li>想要拥有一个自己的服务器吗?</li><br/>\
+				<li>这里提供游戏服务器搭建和出租呦!</li>\
+				<li>感兴趣或者需要帮助的, 请加群找管理员呦!</li><br/>\
+				<li>欢迎进群来吹水和调戏群友!</li><br/>\
+				<li><img  src="http://m.qpic.cn/psc?/V51ztAlx3yGCTb1vfWYy26G3xa2MCfy8/ruAMsa53pVQWN7FLK88i5pF2ONllP*4fnLzmhJwcJwgjBCCQSpMrnQ*Q2IbWqvvXaL2Jq52.FZ1vnjuWtcju6K7tPe.yllQeBrVjET99ZFI!/b&bo=0AAAAdAAAAEBFzA!&rf=viewer_4"/></li>\
+				</ul>\
+		')
+		}
+		else if (type == 4) {
+			javascript:location.reload();
+		}
+		else if (type == 5) {
+			bgimg.style.zIndex = "9";
+		}
+		else if (type == 6) {
+			//setBackgroundFromJSON('moe.jitsu.top/r18&type=json');
+			bgimg.style.backgroundImage = "url(http://moe.jitsu.top/r18)";
+			bgimg.style.zIndex = "9";
+		}
+	}
+</script>
+
+<script>
+
+function setBackgroundFromJSON(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            var jsonData = JSON.parse(xhr.responseText);
+            var imageUrl = jsonData.pics;
+            bgimg.style.backgroundImage = `url(${imageUrl[0]})`;
+        } else {
+            console.error('Network response was not ok. Status: ' + xhr.status);
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Error setting background image from JSON data');
+    };
+
+    xhr.send();
+}
+
+// 调用设置背景图的函数
+setBackgroundFromJSON('http://moe.jitsu.top/img/?sort=pc&type=json');
+</script>
+
+</div></body></html>
