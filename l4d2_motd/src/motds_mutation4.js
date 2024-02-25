@@ -1,7 +1,12 @@
 function ReplaceCmds(type, setu) {
 	if (type == 1) {
 		cmds.innerHTML = ('\
-			<text class="title">当前模式为绝境模式</text><br><br>\
+			<h3 style="text-align:center;">当前模式为绝境模式</h3>\
+			<text class="title2">Q群:735468034</text><br />\
+			<text>本服steam组 <a href="https://steamcommunity.com/groups/jkchan" title="jkchan" target="_blank">https://steamcommunity.com/groups/jkchan</a><br></text>\
+			<text>打不过或有问题到<code>Telegram</code>联系我 <a href="https://t.me/GJK_en" title="@GJK_en" target="_blank">https://t.me/GJK_en</a></text><br><br>\
+			<text class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>\
+			<text class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>\
 			<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>\
 			<ul>\
 				<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>\
@@ -11,7 +16,7 @@ function ReplaceCmds(type, setu) {
 	')}
 	else if (type == 2) {
 		cmds.innerHTML = ('\
-		<h3>介绍一下本服游戏的特性:</h3>\
+		<h3>介绍下此模式的特性:</h3>\
 		<p id="btn6">刷特时间调整↴</p>\
 		<table>\
 			<tbody>\
@@ -96,7 +101,7 @@ function ReplaceCmds(type, setu) {
 				</tr>\
 				<tr>\
 					<td>z(订购键)</td>\
-					<td>订购键的"看"可标记物品 / 路线</td>\
+					<td>订购键的"<spawn style="color:#da4b3a">看</spawn>"可标记物品 / 路线</td>\
 				</tr>\
 			</tbody>\
 		</table>\
