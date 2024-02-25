@@ -2,12 +2,11 @@ function ReplaceCmds(type, setu) {
 	if (type == 1) {
 		cmds.innerHTML = ('\
 			<h3 style="text-align:center;">当前模式为绝境模式</h3>\
-			<text class="title2">Q群:735468034</text><br />\
-			<text>本服steam组 <a href="https://steamcommunity.com/groups/jkchan" title="jkchan" target="_blank">https://steamcommunity.com/groups/jkchan</a><br></text>\
-			<text>打不过或有问题到<code>Telegram</code>联系我 <a href="https://t.me/GJK_en" title="@GJK_en" target="_blank">https://t.me/GJK_en</a></text><br><br>\
-			<text class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>\
-			<text class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>\
-			<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>\
+			<p class="title2">本服Q群:735468034, 以及Steam组: <a href="http://steamcommunity.com/groups/jkchan" title="JKChan Server" target="_blank">http://steamcommunity.com/groups/jkchan</a></p>\
+			<p>有问题可到<code>Telegram</code>联系我 <a href="http://t.me/GJK_en" title="@GJK_en" target="_blank">http://t.me/GJK_en</a></p><br>\
+			<p class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>\
+			<p class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>\
+			<p class="title">进服闪退,音效卡顿掉帧的解决方法:</p>\
 			<ul>\
 				<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>\
 				<li>在选项→视频→高级设置中将"可用的页池内存"改为低可解决闪退问题<br></li>\
