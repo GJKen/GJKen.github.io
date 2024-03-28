@@ -1,13 +1,13 @@
 ﻿<html>
 <head>
-<title>JKChan's Server Mode[mutation4]</title>
+<title>sblx Server Mode[mutation4]</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="http://gitee.com/gjken/web_archive/raw/master/css/main.css" type="text/css"/>
-<!-- <link rel="stylesheet" href="./src/main_norm.css" type="text/css"/> -->
+<link rel="stylesheet" href="http://gitee.com/gjken/web_archive/raw/master/src/main.css" type="text/css"/>
+<!-- <link rel="stylesheet" href="./src/main.css" type="text/css"/> -->
 </head>
 <body>
 	<div id="bgimg" onclick="this.style.zIndex='auto'"></div>
-	<div id="miandiv" onclick="this.style.zIndex='auto'">
+	<div id="maindiv" onclick="this.style.zIndex='auto'">
 		<button id="btn2" class="list" onclick="ReplaceCmds(1)">公告</button>
 		<button id="btn1" class="list" onclick="ReplaceCmds(2)">说明</button>
 		<button id="btn3" class="list" onclick="ReplaceCmds(3)">指令</button>
@@ -25,7 +25,7 @@
 			</ul>
 		</div>
 </body>
-<script type="text/javascript" src="http://gitee.com/gjken/web_archive/raw/master/js/setu.js"></script>
-<!-- <script type="text/javascript" src="http://gitee.com/gjken/web_archive/raw/master/js/motds_mutation4_sblx_norm.js"></script> -->
-<script type="text/javascript" src="./src/motds_mutation4_sblx_norm.js"></script>
+<script type="text/javascript" src="http://gitee.com/gjken/web_archive/raw/master/src/setu.js"></script>
+<script type="text/javascript" src="http://gitee.com/gjken/web_archive/raw/master/src/motds_mutation4_sblx.js"></script>
+<!-- <script type="text/javascript" src="./src/motds_mutation4_sblx.js"></script> -->
 </html>
