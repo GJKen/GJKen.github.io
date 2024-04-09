@@ -12,25 +12,21 @@
 // @require			https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 // ==/UserScript==
 
-function delayBanAD(){
-	setTimeout(function(){
-		//Pixiv
-		$("section:nth-child(4)")
-		$(".sc-12rgki1-0.jMEnyM > :nth-child(5), .sc-171jvz-0.sc-zfvkpm-0.gcrJTU.jqMLBd, section:nth-child(4), .sc-12n125f-0.lxYKE, .sc-12xjnzy-1.expahI").remove()
-	},1000)
-}
-
 window.onload = function(){
-	//gelbooru ad
-	$('.headerAd, .footerAd, .footerAd2').remove()
-    //gelbooru 共用的广告id
-    if ($(".mainBodyPadding > center").children().is('script')){
-		$(".mainBodyPadding > center").remove()
+	// 获取当前网站的URL
+	$currentUrl = document.URL;
+	if ($currentUrl.includes('gelbooru.com')){
+		$('.headerAd, .footerAd, .footerAd2').remove()
+		if ($(".mainBodyPadding > center").children().is('script')){
+			$(".mainBodyPadding > center").remove()
+		}
+		$("#resize-link").prev().remove()
+	} else if ($currentUrl.includes('pixiv.net')){
+		setTimeout(function(){
+			$("section:nth-child(4)").remove()
+			$(".sc-12rgki1-0.jMEnyM > :nth-child(5), .sc-12rgki1-0.jMEnyM > div:nth-child(4), .sc-171jvz-0.sc-zfvkpm-0.gcrJTU.jqMLBd, section:nth-child(4), .sc-12n125f-0.lxYKE, .sc-12xjnzy-1.expahI").remove()
+		},1000)
+	} else if ($currentUrl.includes('kemono.su')){
+		$(".ad-container").remove()
 	}
-	$("#resize-link").prev().remove()
-
-	//kemono
-	$(".ad-container").remove()
-
-	delayBanAD()
 }
