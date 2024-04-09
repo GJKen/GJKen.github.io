@@ -1,77 +1,80 @@
 // ==UserScript==
-// @name         Nyaa Enhance
-// @namespace    Nyaa Enhance by:GJK
-// @version      0.2
-// @description  优化Nyaa的暗黑主题 | 修改nyaa暗黑模式下,主页显示列表字体颜色 | 所有Nyaa域名在顶部添加darkmode按钮
-// @author       Telegram@GJK_en
-// @match        https://*.nyaa.si/*
-// @icon         https://i.altapps.net/icons/nyaa-v2-ec0e0.png
-// @grant        none
-// @license      MIT
+// @name			Nyaa Enhance
+// @version			0.3
+// @description		去广告 | 优化暗黑和白天模式列表的文字配色 | 所有域名在顶部添emjoi加开关按钮
+// @author			Telegram@GJK_en
+// @match			https://*.nyaa.si/*
+// @icon			https://www.google.com/s2/favicons?sz=64&domain=nyaa.si
+// @run-at			document-end
+// @note			2024.04-07-V0.0.3 更新屏蔽的ad | 重构代码为jQuery | DarkMode文字替换成emjoi
+// @license			MIT
+// @downloadURL https://update.greasyfork.org/scripts/451973/Nyaa%20Enhance.user.js
+// @updateURL https://update.greasyfork.org/scripts/451973/Nyaa%20Enhance.user.js
 // ==/UserScript==
 
+function ChangeColor(x){
+	//修改文字颜色函数
+	$tdA = $("td:nth-child(2) > a")
+	if (x == 1){$tdA.css("color","#bcbcbc")}
+	else{$tdA.css("color","#000")}
+}
+
 (function(){
-	// 提前设置需要添加的标签
-	var liTag = document.createElement('li');
-	var liTagA = document.createElement('a');
-	// UL list | UL列表
-	var UlList = document.querySelector("ul:nth-child(1)");
-	// 获取有多少个UL标签
-	var UlCount = UlList.children.length;
-	var body = document.body.classList;
-	// 添加按钮
-	UlList.appendChild(liTag);
-	UlList.children[UlCount].appendChild(liTagA);
-	liTagA.href = '#';
-	liTagA.innerText = 'DarkMode';
-	// 判断是否为nyaa主页
-	if(document.querySelector("table > tbody")==null){
-		UlList.children[UlCount].addEventListener('click', function(){
-			if(body.contains('dark')){
-				body.remove('dark')
-				toggleDarkMode()
-			}else{
-				body.add('dark')
-				toggleDarkMode()
-			}
-		});
-	}else{
-		// 获取tbody | 文件列表
-		var tbodyChild = document.querySelector("table > tbody").children;
-		// 判断body是否有'darkMode'class类, 默认dark模式下修改颜色
-		if(body.contains('dark')){ChangeColor()}
-		UlList.children[UlCount].addEventListener('click', function(){
-			// 给按钮添加监听事件 | 判断body是否有'darkMode'class类
-			if(body.contains('dark')){
-				body.remove('dark')
-				toggleDarkMode()
-				// 恢复文字颜色函数
-				for(let i = 0; i < tbodyChild.length; i++){
-					var x = tbodyChild[i].children[1].children;
-					if(x[1]===undefined){
-						// 无 comment 的情况
-						x[0].removeAttribute('style');
-					}else{
-						x[1].removeAttribute('style');
-					}
-				}
-			}else{
-				body.add('dark')
-				toggleDarkMode()
-				ChangeColor()
-			}
-		});
-		function ChangeColor(){
-			// 修改文字颜色函数
-			for(let i = 0; i < tbodyChild.length; i++){
-				let x = tbodyChild[i].children[1].children;
-				if(x[1]===undefined){
-					// 无 comment 的情况
-					x[0].style.color='#cbcbcb';
-				}else{
-					x[1].style.color='#cbcbcb';
-				}
-			}
-		};
+	//页面开始判断是否为dark模式
+	if($('body').hasClass("dark")){
+		ChangeColor(1)
+		$(".nav")[0].insertAdjacentHTML('beforeend','<li id="themeToggle2"><a href="#" return false;>🌙</a></li>')
 	}
-})();
+	else{
+		ChangeColor(2)
+		$(".nav")[0].insertAdjacentHTML('beforeend','<li id="themeToggle2"><a href="#" return false;>🔆</a></li>')
+	}
+
+	//获取ul 并添加li标签和点击事件
+	$Toogle = $("#themeToggle2")
+	$Toogle.children().css("font-size","18px")
+	$Toogle.click(function(){
+		if($('body').hasClass("dark")){
+			ChangeColor(2)
+			$Toogle.children().text("🔆")
+			toggleDarkMode()
+		}
+		else{
+			ChangeColor(1)
+			$Toogle.children().text("🌙")
+			toggleDarkMode()
+		}
+	})
+
+	//sukebei 横幅广告
+	$("#e71bf691-4eb4-453f-8f11-6f40280c18f6").css("display","none")
+	//sukebei 右下角延时广告
+	if($(".exo_wrapper")){
+		setTimeout(function(){
+			$(".exo_wrapper").css("display","none")
+		},1300)
+	}else{$(".exo_wrapper").css("display","none")}
+})()
+
+//自动翻页
+let lock = false
+window.addEventListener('scroll', async function (){
+	if(lock){
+	  return
+	}
+	if(window.pageYOffset + window.innerHeight >= window.document.querySelector('.table-responsive').scrollHeight){
+		lock = true
+		let next_page = $('ul.pagination li:last-child a').attr('href')
+			if(!next_page){
+			return
+		}
+		next_page = window.location.origin + next_page
+		let res = await fetch(next_page)
+		res = await res.text()
+		let data_list = res.match(/<tbody>\n((.*\n)+)\s+<\/tbody>/)
+		$('.table-responsive tbody').append(data_list[1])
+		let pagination = res.match(/(<ul class="pagination">.*<\/ul>)/s)
+		$('.pagination').replaceWith(pagination[1])
+		lock = false
+	}
+});

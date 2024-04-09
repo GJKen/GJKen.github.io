@@ -1,11 +1,10 @@
 // ==UserScript==
 // @author          GJK_en
-// @name            KemonoPartyBanAD
+// @name            BiliColorFix
 // @namespace       Telegram@GJK_en
-// @icon            blob:chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/28277b0d-56e2-489f-8416-283393e48433
-// @description	    KemonoParty去广告
+// @description	    修复部分暗黑插件颜色错误
 // @version         0.0.1
-// @include         *://kemono.party/*
+// @include         *://www.bilibili.com/video/*
 // @grant           GM_addStyle
 // @run-at          document-start
 // ==/UserScript==
@@ -14,9 +13,10 @@
 	'use strict'
 	const website = [
 	{
-		name: 'kemono',
+		name: 'bilibili',
 		css: `
-			.ad-container, .root--3BHg4{display: none;}
+			.video-desc-container .basic-desc-info[data-v-1d530b8d], .video-info-container .video-info-title-inner .video-title[data-v-a17d480e]{color:#fff !important;}
+            .reply-box .box-normal .reply-box-warp[data-v-a6daab22]{background-color:#222222 !important;}
 		`
 	}
 	]
