@@ -1,0 +1,5 @@
+##.posts-top-cjtz.hidden-xs.hidden-sm.clearfix
+##.copyright-footer
+##.icon-forward
+##.J_showAllShareBtn
+##.ajax-load-con.content.posts-cjtz.hidden-xs.hidden-sm.wow.fadeInUp

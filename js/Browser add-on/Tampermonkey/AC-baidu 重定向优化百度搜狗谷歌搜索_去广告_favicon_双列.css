@@ -1,0 +1,15 @@
+#searchform > div.sfbg{//搜索栏
+	background-color: #303134 !important;
+}
+.r025kc.lVm3ye{//搜索结果无关内容文字
+	color: #7e7e7e !important;
+}
+.N54PNb.BToiNc.cvP2Ce{//搜索内容背景色
+	background: #22252e !important;
+}
+div[two-father] div[two-child]{//搜索内容上级背景色
+	background-color: #292b31;
+}
+#fbar{//页脚
+	background-color: #292b31 !important;
+}

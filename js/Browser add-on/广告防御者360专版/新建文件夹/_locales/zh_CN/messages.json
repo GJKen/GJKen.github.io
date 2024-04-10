@@ -1,0 +1,221 @@
+{
+  "name": {"message":"\u5e7f\u544a\u9632\u5fa1\u8005"},
+  "description":{"message":"\u514d\u8d39\u9ad8\u6548\u7684\u5e7f\u544a\u8fc7\u6ee4\u5de5\u5177\uff1a\u53ef\u4ee5\u8fc7\u6ee4\u70e6\u4eba\u7684\u89c6\u9891\u5e7f\u544a\u3001\u5f39\u7a97\u5e7f\u544a\u3001\u5927\u6a2a\u5e45\u5e7f\u544a\u7b49\u7f51\u9875\u5e7f\u544a\uff0c\u8ba9\u4f60\u6e05\u723d\u6d4f\u89c8\u7f51\u9875\u3002"},
+  "options": {"message":"\u8bbe\u7f6e"},
+  "context_open_log":{"message":"\u5c4f\u853d\u0055\u0072\u006c"},
+  "context_open_block":{"message":"\u5c4f\u853d\u5143\u7d20"},
+  "options_userfilter":{"message":"\u7528\u6237\u8fc7\u6ee4\u5668"},
+  "options_whitelist": {
+    "message": "\u767d\u540d\u5355"
+  },
+  "install_title":{
+    "message": "\u5e7f\u544a\u9632\u5fa1\u8005"
+  },
+  "options_title":{
+    "message":"\u5e7f\u544a\u9632\u5fa1\u8005\u00b7\u8bbe\u7f6e"
+  },
+  "options_home_url":{
+    "message":"\u5b98\u7f51\u003a<a href='http://www.yiclear.com' target='_blank'>www.yiclear.com</a>"
+  },
+  "options_settings_text":{
+    "message":"\u8bbe\u7f6e\u9879"
+  },
+  "options_default":{
+    "message":"<i class='icon-list-alt'></i> \u8fc7\u6ee4\u6e05\u5355"
+  },
+  "options_update_all":{
+    "message":"\u66f4\u65b0\u6240\u6709\u8ba2\u9605\u7ec4"
+  },
+  "options_addfilter_Modal":{
+    "message":"\u6dfb\u52a0\u8ba2\u9605\u7ec4"
+  },
+  "options_addfilter_small":{
+    "message":"\u53ef\u4ee5\u81ea\u884c\u6dfb\u52a0\u7b2c\u4e09\u65b9\u8ba2\u9605\u7ec4\uff0c\u9ed8\u8ba4\u8ba2\u9605\u7ec4\u65e0\u6cd5\u5220\u9664\uff0c\u4f46\u53ef\u4ee5\u505c\u7528\uff01"
+  },
+  "options_modifyfilter_Modal":{
+    "message":"\u6dfb\u52a0\u8ba2\u9605\u7ec4\u5907\u6ce8"
+  },
+  "options_userRules":{
+    "message":"<i class='icon-pencil'></i> \u81ea\u5b9a\u4e49\u8fc7\u6ee4"
+  },
+  "options_userRules_head_text":{
+    "message":"\u81ea\u5b9a\u4e49\u8fc7\u6ee4\u89c4\u5219\u002d\u002d\u002d\u4e0b\u65b9\u8f93\u5165\u6846\u4e3a\u641c\u7d22\u6dfb\u52a0\u7efc\u5408\u8f93\u5165\u6846\uff01"
+  },
+  "options_passDomain":{
+    "message":"<i class='icon-ban-circle'></i> \u6392\u9664\u57df\u540d"
+  },
+  "options_passDomain_head_text":{
+    "message":"\u6392\u9664\u57df\u540d\u002d\u002d\u002d\u4e0b\u65b9\u8f93\u5165\u4e0d\u8fc7\u6ee4\u7684\u57df\u540d\uff0c\u8f93\u5165\u0077\u0077\u0077\u4e0e\u4e0d\u8f93\u5165\u0077\u0077\u0077\u6709\u533a\u522b\uff01"
+  },
+  "options_settings":{
+    "message":"<i class='icon-cogs''></i> \u5e38\u89c4\u8bbe\u7f6e"
+  },
+  "options_help":{
+    "message":"<i class='icon-book'></i> \u4f7f\u7528\u5e2e\u52a9"
+  },
+  "options_userfilter_search_placeholder":{
+    "message":"\u8f93\u5165\u9700\u8981\u641c\u7d22\u002f\u6dfb\u52a0\u7684\u89c4\u5219"
+  },
+  "options_passdomain_search_placeholder":{
+    "message":"\u8f93\u5165\u9700\u8981\u6392\u9664\u7684\u57df\u540d\uff0c\u56de\u8f66\u6dfb\u52a0\uff01"
+  },
+  "filtering_log_title": {
+    "message": "\u8fc7\u6ee4\u65e5\u5fd7"
+  },
+  "filtering_log_tab": {
+    "message": "\u6807\u7b7e\uff1a"
+  },
+  "filtering_log_search_string": {
+    "message": "\u8f93\u5165\u641c\u7d22\u5b57\u7b26\u4e32"
+  },
+  "filtering_refresh_tab": {
+    "message": "\u5237\u65b0\u9875\u9762"
+  },
+  "filtering_clear_tab_events": {
+    "message": "\u6e05\u9664"
+  },
+  "filtering_type_all": {
+    "message": "\u5168\u90e8"
+  },
+  "filtering_table_type": {
+    "message": "\u7c7b\u578b"
+  },
+  "filtering_table_rule": {
+    "message": "\u8fc7\u6ee4\u89c4\u5219"
+  },
+  "filtering_table_source": {
+    "message": "\u6e90"
+  },
+  "filtering_table_time": {
+    "message": "\u65f6\u95f4"
+  },
+  "filtering_table_empty_row": {
+    "message": "\u6b64\u9875\u7684\u65e5\u5fd7\u4e3a\u7a7a\u3002\u8bf7<a href='#' class='reloadTab'>\u91cd\u8f7d\u9875\u9762<\/a>\u4ee5\u67e5\u770b\u65e5\u5fd7\u3002"
+  },
+  "filtering_modal_info_title": {
+    "message": "\u8981\u6c42\u8be6\u7ec6\u4fe1\u606f"
+  },
+  "filtering_modal_type": {
+    "message": "\u7c7b\u578b\uff1a"
+  },
+  "filtering_modal_source": {
+    "message": "\u6e90\uff1a"
+  },
+  "filtering_modal_rule": {
+    "message": "\u89c4\u5219\uff1a"
+  },
+  "filtering_modal_filter": {
+    "message": "\u8fc7\u6ee4\u5668\uff1a"
+  },
+  "filtering_modal_block": {
+    "message": "\u62e6\u622a"
+  },
+  "filtering_modal_unblock": {
+    "message": "\u53d6\u6d88\u62e6\u622a"
+  },
+  "filtering_modal_remove_user": {
+    "message": "\u4ece\u7528\u6237\u8fc7\u6ee4\u5668\u79fb\u9664"
+  },
+  "filtering_modal_remove_whitelist": {
+    "message": "\u4ece\u767d\u540d\u5355\u8fc7\u6ee4\u5668\u79fb\u9664"
+  },
+  "filtering_modal_add_title": {
+    "message": "\u6dfb\u52a0\u89c4\u5219"
+  },
+  "filtering_modal_rule_text": {
+    "message": "\u89c4\u5219\u6587\u672c"
+  },
+  "filtering_modal_patterns": {
+    "message": "\u65b9\u6848"
+  },
+  "filtering_modal_options": {
+    "message": "\u9009\u9879"
+  },
+  "filtering_modal_apply_domains": {
+    "message": "\u5e94\u7528\u89c4\u5219\u5230\u6240\u6709\u7f51\u7ad9"
+  },
+  "filtering_modal_match_case": {
+    "message": "\u8003\u8651\u6b64\u60c5\u51b5"
+  },
+  "filtering_modal_third_party": {
+    "message": "\u4ec5\u5e94\u7528\u5230\u7b2c\u4e09\u65b9\u8bf7\u6c42"
+  },
+  "filtering_modal_add_rule": {
+    "message": "\u6dfb\u52a0\u89c4\u5219"
+  },
+  "filtering_modal_exception_title": {
+    "message": "\u6dfb\u52a0\u4f8b\u5916"
+  },
+  "filtering_modal_open_in_new_tab": {
+    "message": "\u4e8e\u65b0\u6807\u7b7e\u9875\u6253\u5f00"
+  },
+  "filtering_log_in_whitelist": {
+    "message": "\u7f51\u7ad9\u5c5e\u4e8e\u767d\u540d\u5355"
+  },
+  "assistant_select_element": {
+    "message": "\u9009\u62e9\u6a21\u5f0f"
+  },
+  "assistant_select_element_ext": {
+    "message": "\u79fb\u52a8\u9f20\u6807\u5230\u9875\u9762\u4efb\u610f\u5143\u7d20\u540e\u70b9\u51fb\u9f20\u6807\u5de6\u952e\u5b8c\u6210\u8fc7\u6ee4\u5143\u7d20\u9009\u62e9\u0021"
+  },
+  "assistant_select_element_cancel": {
+    "message": "\u53d6\u6d88\u9009\u62e9\u6a21\u5f0f"
+  },
+  "assistant_block_element": {
+    "message": "\u8fc7\u6ee4\u5143\u7d20"
+  },
+  "assistant_block_element_explain": {
+    "message": "\u5143\u7d20\u8fc7\u6ee4\u9009\u62e9\u5668"
+  },
+  "assistant_slider_explain": {
+    "message": "\u4f7f\u7528\u6ed1\u52a8\u6761\u5fae\u8c03\u5df2\u9009\u62e9\u7684\u8fc7\u6ee4\u5143\u7d20\uff1a"
+  },
+  "assistant_slider_if_hide": {
+    "message": "\u8fc7\u6ee4\u5668\u5c06\u5305\u542b\u62e6\u622a\u6240\u9009\u5143\u7d20\u7684\u89c4\u5219"
+  },
+  "assistant_slider_min": {
+    "message": "\u8f83\u5c0f"
+  },
+  "assistant_slider_max": {
+    "message": "\u8f83\u5927"
+  },
+  "assistant_extended_settings": {
+    "message": "\u9ad8\u7ea7\u8bbe\u7f6e..."
+  },
+  "assistant_rule_parameters": {
+    "message": "\u89c4\u5219\u53c2\u6570"
+  },
+  "assistant_apply_rule_to_all_sites": {
+    "message": "\u5e94\u7528\u6b64\u89c4\u5219\u5230\u5404\u7f51\u7ad9<input id='oneDomainRadio' type='checkbox' class='checkbox'>"
+  },
+  "assistant_block_by_reference": {
+    "message": "\u7ecf\u7531 URL \u62e6\u622a\u5143\u7d20<input id='blockByUrl' type='checkbox' class='checkbox'>"
+  },
+  "assistant_block_similar": {
+    "message": "\u62e6\u622a\u7c7b\u4f3c\u7684\u5143\u7d20<input id='blockSimilar' type='checkbox' class='checkbox'>"
+  },
+  "assistant_block_class": {
+    "message": "\u901a\u8fc7\u0063\u006c\u0061\u0073\u0073\u62e6\u622a<input id='blockClass' type='checkbox' class='checkbox'>"
+  },
+  "assistant_block": {
+    "message": "\u62e6\u622a"
+  },
+  "assistant_another_element": {
+    "message": "\u9009\u62e9\u5176\u5b83\u5143\u7d20"
+  },
+  "assistant_preview": {
+    "message": "\u9884\u89c8"
+  },
+  "assistant_preview_header": {
+    "message": "\u8fc7\u6ee4\u5143\u7d20\u0020\u002d\u0020\u6548\u679c\u9884\u89c8"
+  },
+  "assistant_preview_header_info": {
+    "message": "\u5982\u679c\u4f60\u8ba4\u4e3a\u6548\u679c\u4e0d\u662f\u5f88\u6ee1\u610f\u53ef\u4ee5\u70b9\u51fb\u9009\u62e9\u5176\u4ed6\u5143\u7d20\u6309\u94ae\u8fdb\u884c\u91cd\u65b0\u9009\u62e9\uff01"
+  },
+  "assistant_preview_start": {
+    "message": "\u9884\u89c8"
+  },
+  "assistant_preview_end": {
+    "message": "\u5b8c\u6210\u9884\u89c8"
+  }
+}

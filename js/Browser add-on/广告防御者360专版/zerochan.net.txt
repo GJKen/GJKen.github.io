@@ -1,0 +1,1 @@
+zerochan.net###onetag-sticky-footer > IFRAME:last-child

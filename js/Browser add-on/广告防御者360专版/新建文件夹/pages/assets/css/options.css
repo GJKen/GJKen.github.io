@@ -1,0 +1,196 @@
+/* Write your styles */
+html,
+body {
+    height: 100%;
+    /*overflow: hidden;*/
+}
+ul {
+    margin-top: 0;
+}
+.options-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.options-main {
+    position: relative;
+    height: 100%;
+    padding-top: 51px;
+    background: #f3f3f3;
+}
+
+.options-menu {
+    position: fixed;
+    z-index: 10;
+    bottom: 30px;
+    right: 20px;
+}
+
+.options-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #fff;
+}
+.options-content,
+.options-sidebar {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.options-content-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.options-content-footer {
+    font-size: 85%;
+    color: #777;
+}
+
+.options-content-list {
+    border: 1px solid #e9ecf1;
+    margin-top: 0;
+}
+
+.options-content-list li {
+    border: 1px solid #e9ecf1;
+    border-width: 0 1px;
+    margin-left: -1px;
+}
+
+.options-content-list li:first-child {
+    border-left: none;
+}
+
+.options-content-list li:last-child {
+    border-right: none;
+}
+
+.options-sidebar {
+    width: 260px;
+    min-height: 100%;
+    float: left;
+    border-right: 1px solid #cecece;
+}
+.options-sidebar.am-active {
+    z-index: 1600;
+}
+
+.options-sidebar-list {
+    margin-bottom: 0;
+}
+
+.options-sidebar-list li a {
+    color: #5c5c5c;
+    padding-left: 24px;
+}
+
+.options-sidebar-list li:first-child {
+    border-top: none;
+}
+
+.options-sidebar-sub {
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 0 16px 8px -15px #e2e2e2 inset;
+    background: #ececec;
+    padding-left: 24px;
+}
+
+.options-sidebar-sub li:first-child {
+    border-top: 1px solid #dedede;
+}
+
+.options-sidebar-panel {
+    margin: 10px;
+}
+.options-sidebar {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@media only screen and (min-width: 641px) {
+    .options-sidebar {
+        display: block;
+        position: static;
+        background: none;
+    }
+
+    .options-offcanvas-bar {
+        position: static;
+        width: auto;
+        background: none;
+        overflow-y: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .options-offcanvas-bar:after {
+        content: none;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .options-sidebar {
+        width: inherit;
+    }
+
+    .options-offcanvas-bar {
+        background: #f3f3f3;
+    }
+
+    .options-offcanvas-bar:after {
+        background: #BABABA;
+    }
+
+    .options-sidebar-list a:hover, .admin-sidebar-list a:active{
+        -webkit-transition: background-color .3s ease;
+        -moz-transition: background-color .3s ease;
+        -ms-transition: background-color .3s ease;
+        -o-transition: background-color .3s ease;
+        transition: background-color .3s ease;
+        background: #E4E4E4;
+    }
+
+    .options-content-list li {
+        padding: 10px;
+        border-width: 1px 0;
+        margin-top: -1px;
+    }
+
+    .options-content-list li:first-child {
+        border-top: none;
+    }
+
+    .options-content-list li:last-child {
+        border-bottom: none;
+    }
+
+    .options-form-text {
+        text-align: left !important;
+    }
+
+}
+
+#options-user-rule-list{
+    width:100%;
+    height: 300px;
+}
+.options-settings-content{
+    padding-left: 30px;
+}

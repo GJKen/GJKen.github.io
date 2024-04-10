@@ -1,0 +1,285 @@
+{
+  "sVersion": "5.18",
+  "websiteList": [
+    {
+      "contexts": [
+        "selection"
+      ],
+      "id": 1,
+      "recentLen": 1,
+      "type": "recent"
+    },
+    {
+      "contexts": [
+        "selection"
+      ],
+      "id": 37,
+      "type": "separator"
+    },
+    {
+      "contexts": [
+        "selection"
+      ],
+      "id": 2,
+      "type": "separator"
+    },
+    {
+      "address": "https://www.google.com/search?q=",
+      "contexts": [
+        "selection",
+        "page",
+        "frame",
+        "tab"
+      ],
+      "id": 3,
+      "name": "Google",
+      "popup": true,
+      "prompt": true,
+      "type": "link"
+    },
+    {
+      "address": "https://nyaa.si/?f=0&c=0_0&q=",
+      "contexts": [
+        "selection",
+        "page",
+        "frame",
+        "link"
+      ],
+      "icon": "https://i.altapps.net/icons/nyaa-v2-ec0e0.png",
+      "id": 38,
+      "name": "NyaaFap",
+      "popup": true,
+      "prompt": true,
+      "type": "link"
+    },
+    {
+      "address": "http://bangumi.tv/subject_search/~$S$~+?cat=2",
+      "contexts": [
+        "selection",
+        "page",
+        "link",
+        "frame"
+      ],
+      "icon": "https://lain.bgm.tv/pic/user/l/icon.jpg",
+      "id": 39,
+      "name": "Bangumi_aniSearch",
+      "popup": true,
+      "prompt": true,
+      "type": "link"
+    },
+    {
+      "address": "https://www.youtube.com/results?search_query=",
+      "contexts": [
+        "selection"
+      ],
+      "id": 4,
+      "name": "YouTube",
+      "popup": true,
+      "type": "link"
+    },
+    {
+      "address": "https://www.google.com/images?q=",
+      "contexts": [
+        "selection"
+      ],
+      "icon": "https://s2.loli.net/2022/10/30/3SRgznHCAvFM2Js.png",
+      "id": 5,
+      "name": "Google Images",
+      "popup": true,
+      "type": "link"
+    },
+    {
+      "address": "https://search.bilibili.com/all?keyword=~$S$~",
+      "contexts": [
+        "selection"
+      ],
+      "id": 40,
+      "name": "逼站搜索",
+      "popup": true,
+      "prompt": true,
+      "type": "link"
+    },
+    {
+      "address": "https://en.wikipedia.org/wiki/",
+      "contexts": [
+        "selection"
+      ],
+      "id": 7,
+      "name": "Wikipedia",
+      "popup": true,
+      "type": "link"
+    },
+    {
+      "folder": [
+        {
+          "address": "https://www.google.com/search?q=site:imgur.com+",
+          "contexts": [
+            "selection"
+          ],
+          "id": 18,
+          "name": "Imgur on Google",
+          "type": "link"
+        },
+        {
+          "address": "https://mobile.twitter.com/search?q=",
+          "contexts": [
+            "selection"
+          ],
+          "id": 15,
+          "name": "Twitter",
+          "type": "link"
+        },
+        {
+          "address": "https://translate.google.com",
+          "contexts": [
+            "selection"
+          ],
+          "id": 22,
+          "name": "Google Translate",
+          "type": "link"
+        },
+        {
+          "address": "https://www.bing.com/search?q=",
+          "contexts": [
+            "selection"
+          ],
+          "id": 12,
+          "name": "Bing",
+          "type": "link"
+        },
+        {
+          "address": "https://www.imdb.com/find?q=",
+          "contexts": [
+            "selection"
+          ],
+          "id": 23,
+          "name": "Movies",
+          "type": "link"
+        }
+      ],
+      "id": 9,
+      "name": "Other...",
+      "type": "folder"
+    },
+    {
+      "address": "https://www.google.com/search?q=~$S$~+site:~$B$~",
+      "contexts": [
+        "selection",
+        "page",
+        "frame",
+        "tab"
+      ],
+      "id": 24,
+      "name": "Current website",
+      "prompt": true,
+      "type": "link"
+    },
+    {
+      "address": "",
+      "contexts": [
+        "selection"
+      ],
+      "id": 25,
+      "name": "Open selected link",
+      "type": "link"
+    },
+    {
+      "address": "https://images.google.com/searchbyimage?image_url=~$U$~",
+      "contexts": [
+        "image"
+      ],
+      "id": 26,
+      "name": "Google reverse image search",
+      "type": "link"
+    },
+    {
+      "address": "https://translate.google.com/translate?u=~$U$~",
+      "contexts": [
+        "page",
+        "frame",
+        "tab"
+      ],
+      "id": 28,
+      "name": "Google Translate",
+      "type": "link"
+    },
+    {
+      "address": "https://web.archive.org/web/*/~$U$~",
+      "contexts": [
+        "page",
+        "frame",
+        "tab"
+      ],
+      "icon": "https://web.archive.org/static/images/archive.ico",
+      "id": 30,
+      "name": "Internet Archive",
+      "type": "link"
+    },
+    {
+      "contexts": [
+        "selection",
+        "page",
+        "frame",
+        "tab"
+      ],
+      "id": 31,
+      "type": "separator"
+    },
+    {
+      "address": "书签栏\\Search",
+      "contexts": [
+        "selection"
+      ],
+      "id": 32,
+      "type": "bookmarks"
+    },
+    {
+      "folder": [
+        {
+          "address": "书签栏\\Context Menu",
+          "contexts": [
+            "page",
+            "frame",
+            "tab"
+          ],
+          "id": 34,
+          "type": "bookmarks"
+        }
+      ],
+      "id": 33,
+      "name": "Bookmarks",
+      "type": "folder"
+    },
+    {
+      "contexts": [
+        "selection"
+      ],
+      "id": 35,
+      "type": "separator"
+    },
+    {
+      "contexts": [
+        "selection"
+      ],
+      "id": 36,
+      "type": "options"
+    }
+  ],
+  "sMenuLabel": "",
+  "bShowPopup": true,
+  "iPopupMaxColumns": 6,
+  "iPopupIconSize": 21,
+  "bClosePopupOnClick": true,
+  "bClosePopupOnScroll": true,
+  "bClosePopupOnTimeout": true,
+  "iPopupCloseTimeout": 4,
+  "bShowAddSearchPage": true,
+  "bCopySelection": false,
+  "sOpenSearchIn": "opnt",
+  "oPlaceHolder": {
+    "domain": "~$D$~",
+    "keywords": "~$S$~",
+    "subdomain": "~$B$~",
+    "url": "~$U$~"
+  }
+}

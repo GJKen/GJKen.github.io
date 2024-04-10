@@ -1,0 +1,5 @@
+konachan.com##.footer
+konachan.com###post-list > DIV.content:last-child > IFRAME:first-child
+konachan.com###right-col > IFRAME:nth-child(7)
+konachan.com###right-col > IFRAME:nth-child(8)
+konachan.com###right-col > IFRAME:nth-child(9)

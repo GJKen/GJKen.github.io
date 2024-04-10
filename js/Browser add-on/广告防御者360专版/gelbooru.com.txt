@@ -1,0 +1,2 @@
+##DIV.padding15:nth-child(18) > DIV.contain-push:nth-child(7) > DIV.hidden-xs:nth-child(4) > IFRAME:last-child
+##DIV.padding15:nth-child(18) > DIV.contain-push:nth-child(7) > DIV.hidden-xs:nth-child(4) > IFRAME:last-child

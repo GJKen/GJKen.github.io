@@ -1,0 +1,41 @@
+body {
+    width: 290px;
+    /*330*/
+    height: 378px;
+    /*436*/
+    margin: 0px;
+    /*overflow-x:hidden;*/
+    background-image: url("../i/plus-back.png");
+    background-repeat: no-repeat;
+    /*background-position: 0px 82px;*/
+}
+.popup-header{
+    background-color:#ffffff;
+}
+.popup-header strong{
+    color: #74b3be;
+}
+.container span{
+    color: #ffffff;
+}
+.container #left-number{
+    color: #f1f1f1;
+    height: 80px;
+    font-size: 50px;
+
+}
+.container #right-number{
+    color: #f1f1f1;
+    height: 80px;
+    font-size: 24px;
+}
+#left-number span{
+
+    position: absolute;
+    bottom: 26px;
+}
+#right-number span{
+
+    position: absolute;
+    bottom: 35px;
+}

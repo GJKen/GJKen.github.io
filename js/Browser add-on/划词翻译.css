@@ -1,0 +1,210 @@
+/* 
+复制来自issue大佬
+自己修改翻译面板快捷链接的样式
+https://github.com/hcfyapp/crx-selection-translate/discussions/950#discussioncomment-5341972
+*/
+#translate-panel {
+  /* 浅色模式下的面板样式 */
+}
+.bp5-dark #translate-panel {
+  /* 深色模式下的面板样式 */
+}#translate-panel {
+  /* 浅色模式下的面板样式 */
+}
+.bp4-dark #translate-panel {
+  /* 深色模式下的面板样式 */
+}
+#translate-panel {
+  padding-bottom: 0;
+}
+#translate-panel .query-text {
+  display: none !important;
+}
+#translate-panel .legend {
+  opacity: 0;
+  height: 0px;
+  transition: all 0.4s;
+}
+#translate-panel:hover  .legend {
+  opacity: 1;
+  height: 15px;
+}
+#translate-panel  .quick-links {
+  display: flex;
+  justify-content: flex-end;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+#translate-panel:hover  .quick-links {
+ height: 22px;
+ opacity: 1;
+}
+#translate-panel  .quick-links a{
+ color: #ffc3c3;
+ font-size: 12px;
+ margin: 0 5px 5px 0 !important;
+ /* transform: scale(0.8); */
+ font-family: none;
+}
+#translate-panel .result-block {
+  margin: 0;
+}
+#translate-panel .header {
+  box-sizing:border-box;
+  height: 0px;
+  transition: height 0.4s;
+  padding: 0 6px 0 8px;
+}
+#translate-panel:hover  .header {
+  height: 32px;
+}
+#translate-panel .header .left, #translate-panel .header .right {
+ opacity: 0;
+  transition: opacity 0.3s;
+}
+#translate-panel:hover  .header .left, #translate-panel:hover  .header .right{
+  opacity: 1;
+}
+#translate-panel .header .switch-pin .bp4-icon {
+color: #aaa;
+}
+#translate-panel .header .left {
+ opacity: 0;
+}
+#translate-panel .header:hover .left {
+  opacity: 1;
+}
+#translate-panel .bp4-card {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#translate-btn .btn-icon {
+  filter: invert(1);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 3px;
+}
+.bp4-dark #translate-btn  .btn-icon {
+  /* 深色模式下的 icon 样式 */
+  filter: none;
+}
+#translate-btn .bp4-button {
+    background: rgba(0,0,0,0.7);
+    border-radius: 7px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-width: unset;
+    min-height: unset;
+}
+
+
+:root {
+--text-color: currentColor;
+}
+
+#translate-panel {
+background: none !important;
+}
+
+#popper-container {
+backdrop-filter: blur(5px);
+border-radius: 8px;
+background-color: rgba(0, 0, 0, 0.7) !important;
+color: var(--text-color);
+}
+
+.source-text {
+color: #aaa;
+}
+
+.phonetic-item {
+opacity: 0.5;
+color: #aaa;
+}
+
+.phonetic-item > span > a {
+color: #c3ff4c;
+}
+
+.result-block h6 {
+display: none !important;
+}
+
+.fixed {
+margin: 0 !important;
+}
+
+.header {
+border-bottom: none !important;
+}
+
+.result-block {
+padding: 4px 4px 4px 4px !important;
+border-radius: 8px;
+background: var(--panel-color) !important;
+color: var(--text-color);
+}
+
+.result-block:hover a {
+text-decoration: underline !important;
+}
+
+
+.dict span {
+font-size: 0.5rem;
+opacity: 0.8;
+margin: 0 0.5rem 0 0;
+color: var(--text-color);
+}
+
+.dict a {
+color: black !important;
+font-size: 900;
+text-decoration: none !important;
+margin: 0 0.2rem;
+font-weight: bold;
+}
+
+.dict p {
+font-weight: bold !important;
+color: #aaa;
+}
+
+.arrow {
+display: none !important;
+}
+
+#popper-container svg {
+color: #999 !important;
+}
+
+.general-result p {
+font-weight: bold !important;
+color: #ccc !important;
+}
+
+.dict span {
+color: #aaa!important;
+}
+
+.body::-webkit-scrollbar {
+display: none;
+}
+
+.body {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.drag-block {
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+}

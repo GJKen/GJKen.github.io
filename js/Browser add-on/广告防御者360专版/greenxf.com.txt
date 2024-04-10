@@ -1,0 +1,2 @@
+greenxf.com##.maybeDownload.clearfix
+greenxf.com##DIV.maybeDownload-cover:nth-child(17)

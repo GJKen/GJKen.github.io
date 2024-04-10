@@ -1,0 +1,3 @@
+##.ad_head_wide
+##.side_menu_block.side_banner
+shanximovie.net###content_ad_head_wide > DIV:nth-child(27)

@@ -1,0 +1,6 @@
+bilibili.com##.pl__card
+bilibili.com##.pl__head
+bilibili.com##.nav-item.mobile
+bilibili.com###home_footer > DIV.footer-wrp > DIV.footer-cnt.clearfix.report-wrap-module > DIV.partner:last-child
+bilibili.com##DIV.footer.bili-footer:nth-child(7) > DIV.footer-wrp > DIV.footer-cnt.clearfix.report-wrap-module > DIV.partner:last-child > DIV.block.left:last-child > P:nth-child(2)
+bilibili.com##DIV.footer.bili-footer:nth-child(7)

@@ -1,0 +1,13 @@
+##.app-download-guide.top
+##.right-content
+##.share-qq
+##.sina
+##.share-weibo
+##.sites
+##.dt-footer-span.dt-footer-first.oh.tc
+###pg-appdload
+##.dt-footer-bottom
+##.dt-footer-span.oh.dt-footer-last
+##.dt-footer-text
+##.beian1
+duitang.com##.app-download-guide

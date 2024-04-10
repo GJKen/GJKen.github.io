@@ -1,0 +1,6 @@
+chan.sankakucomplex.com##.scad
+chan.sankakucomplex.com###headerthumbs
+chan.sankakucomplex.com###post-view > DIV.sidebar:first-child > DIV:last-child
+chan.sankakucomplex.com##.scad-i
+##.scad
+###post-view > DIV.sidebar:first-child > DIV:last-child

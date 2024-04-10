@@ -1,0 +1,1 @@
+sukebei.nyaa.si##DIV.container:nth-child(2) > DIV.servers-cost-money1:nth-child(2)

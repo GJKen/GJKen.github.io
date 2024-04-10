@@ -1,0 +1,112 @@
+{
+  "background": {
+    "page":"bg.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [ {
+    "all_frames": true,
+    "js": [
+      "lib/libs/extended.js",
+      "common-script.js",
+      "content-script.js",
+      "element-collapser.js",
+      "wrappers.js",
+      "include.preload.js"
+    ],
+    "matches": [ "<all_urls>" ],
+    "match_about_blank": true,
+    "run_at": "document_start"
+  },{
+    "all_frames": false,
+    "js": [
+      "subscribe.js"
+    ],
+    "matches":[
+      "*://*.yiclear.com/*",
+      "*://*.github.io/*",
+      "*://*.abpchina.org/*",
+      "*://*.abpindo.blogspot.com/*",
+      "*://*.abpvn.com/*",
+      "*://*.adblock-listefr.com/*",
+      "*://*.adblock.gardar.net/*",
+      "*://*.adblockplus.org/*",
+      "*://*.adblockplus.me/*",
+      "*://*.adguard.com/*",
+      "*://*.certyficate.it/*",
+      "*://*.code.google.com/*",
+      "*://*.dajbych.net/*",
+      "*://*.fanboy.co.nz/*",
+      "*://*.fredfiber.no/*",
+      "*://*.filterlists.com/*",
+      "*://*.gardar.net/*",
+      "*://*.github.com/*",
+      "*://*.henrik.schack.dk/*",
+      "*://*.latvian-list.site11.com/*",
+      "*://*.liamja.co.uk/*",
+      "*://*.malwaredomains.com/*",
+      "*://*.margevicius.lt/*",
+      "*://*.nauscopio.nireblog.com/*",
+      "*://*.nireblog.com/*",
+      "*://*.noads.it/*",
+      "*://*.schack.dk/*",
+      "*://*.spam404.com/*",
+      "*://*.stanev.org/*",
+      "*://*.void.gr/*",
+      "*://*.yoyo.org/*",
+      "*://*.zoso.ro/*"
+    ]
+  },
+    {
+      "all_frames": true,
+      "css": [
+        "assistant/css/selector.css"
+      ],
+      "js": [
+        "lib/libs/diff_match_patch.js",
+        "lib/libs/dom.patched.js",
+        "lib/libs/balalaika.patched.js",
+        "lib/libs/deferred.js",
+        "i18n-helper.js",
+        "assistant/js/yiclear-selector.js",
+        "assistant/js/yiclear-rules-constructor.js",
+        "assistant/js/slider-widget.js",
+        "assistant/js/assistant.js",
+        "assistant/js/start-assistant.js"
+      ],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+    }
+  ],
+  "default_locale": "zh_CN",
+  "description": "__MSG_description__",
+  "icons": {
+    "128": "icons/new-128.png",
+    "16": "icons/new-16.png",
+    "19": "icons/new-19.png",
+    "32": "icons/new-32.png",
+    "48": "icons/new-48.png"
+  },
+  "manifest_version": 2,
+  "minimum_chrome_version": "18.0",
+  "name": "__MSG_name__",
+  "options_page": "pages/options.html",
+  "browser_action": {
+    "default_icon": "icons/new-19.png",
+    "default_popup": "pages/popup.html",
+    "default_title": "__MSG_name__"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "<all_urls>",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "browsingData"
+  ],
+  "version": "2.3.1",
+  "homepage_url":"http://www.yiclear.com",
+  "web_accessible_resources": ["elemhidehit.png", "assistant/css/assistant.css", "assistant/i/close.svg"]
+}

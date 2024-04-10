@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <title>popup</title>
+    <link type=text/css href=assets/css/smallnumber.css rel=stylesheet>
+    <link type=text/css href=assets/css/bignumber.css rel=stylesheet>
+    <script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>
+    <script type=text/javascript src=assets/js/smallnumber.js></script>
+    <script type=text/javascript src=assets/js/bignumber.js></script>
+    <script type=text/javascript src=assets/js/popup.js></script>
+    <style type=text/css>
+        body {
+            width: 290px;
+            /*330*/
+            height: 385px;
+            /*436*/
+            margin: 0;
+            overflow-x:hidden;
+            /*background-image: url("assets/i/plus-back.png");*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: 0px 82px;*/
+        }
+
+        .title-left {
+            margin: 8px;
+            float: left;
+            line-height: 59px;
+            width: 150px;
+            background-image: url("../icons/new-32.png");
+            background-repeat: no-repeat;
+            background-position: 0;
+        }
+
+        .title-left #title-name {
+            color: #2387ef;
+            font-size: 18px;
+            margin-left: 38px;
+        }
+
+        .title-right-enabled {
+            margin: 8px;
+            float: right;
+            line-height: 82px;
+            height: 59px;
+            width: 59px;
+        }
+
+        .title-right-enabled input[type=checkbox] {
+            visibility: hidden;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        input[type="checkbox"] + label {
+            display: inline-block;
+            width: 55px;
+            height: 20px;
+            position: relative;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            margin: 0px 20px;
+            box-sizing: border-box;
+            top: -6px;
+            right: 30px;
+        }
+        input[type="checkbox"] + label:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: -3px;
+            width: 26px;
+            height: 26px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        #enabled:checked + label.blue {
+            background: #2387ef;
+        }
+        #enabled:checked + label:after {
+            left: calc(100% - 20px);
+        }
+        #enabled:checked + label.blue:after {
+            /*background: #2883e3;*/
+        }
+        #enabled + label {
+            background: #b5d9fe;
+            border-radius: 20px;
+            box-shadow: 1px 1px 3px #aaa;
+        }
+        #enabled + label:after {
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 1px 1px 3px #aaa;
+        }
+
+        .main {
+            position: relative;
+            margin: 0;
+            top: 83px;
+            left: 0px;
+            height: 240px;
+            background-color: #2387ef;
+        }
+
+        .main #title {
+            margin: 8px;
+            color: #ffffff;
+            font-size: 16px;
+            position: absolute;
+            /*width: 105px;*/
+            /*height: 51px;*/
+            /*background-image: url("assets/i/gl.png");*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: -20px -15px;*/
+        }
+
+        .main #main-left {
+            position: absolute;
+            float: left;
+            top: 45px;
+            height: 100px;
+            width: 50%;
+        }
+
+        .main #main-left-current {
+            position: absolute;
+            height: 40px;
+            width: 100%;
+            color: #ffffff;
+            font-size: 16px;
+            text-align: center;
+            /*background-image: url("assets/i/dangqian.png");*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: 10px 0px;*/
+        }
+
+        .main #main-right {
+            position: absolute;
+            height: 100px;
+            top: 45px;
+            right: 0;
+            width: 50%;
+        }
+
+        .main #right-js-num {
+            position: relative;
+            top: 21%;
+        }
+
+        .main #main-right-current {
+            position: absolute;
+            top: 66px;
+            height: 40px;
+            width: 100%;
+            color: #ffffff;
+            font-size: 16px;
+            text-align: center;
+            /*background-image: url("assets/i/leiji.png");*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: 10px 0px;*/
+        }
+
+        /*.main #animation {*/
+            /*position: relative;*/
+            /*height: 187px;*/
+            /*margin: 0;*/
+            /*background-image: url("assets/i/curve.png");*/
+            /*background-position: -135px 50px;*/
+            /*background-repeat: no-repeat;*/
+        /*}*/
+
+        .footer {
+            position: relative;
+            margin: 0;
+            top: 89px;
+            left: 0px;
+            height: 54px;
+            background-image: url("assets/i/fenge.png");
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .footer #footer-left-OptionsButton {
+            position: relative;
+            float: left;
+            cursor: pointer;
+            width: 50%;
+            height: 100%;
+            line-height: 51px;
+            font-family: "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+            font-size: 20px;
+            color: #656b75;
+        }
+
+        .footer #footer-left-OptionsButton img {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+
+        .footer #footer-right {
+            position: relative;
+            float: right;
+            cursor: pointer;
+            width: 50%;
+            /*height:54px;*/
+            line-height: 51px;
+            font-family: "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+            font-size: 20px;
+            color: #656b75;
+        }
+
+        .footer #footer-right img {
+            position: relative;
+            top: 7px;
+        }
+
+        a:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class=title-left>
+    <div id=title-name i18n="name"></div>
+</div>
+<div class=title-right-enabled>
+    <input id=enabled type=checkbox checked>
+    <label for=enabled class="blue"><span class=i18n_enabled_for_site></span></label>
+</div>
+<div class=main>
+    <div id=title>已拦截广告:</div>
+    <div id=main-left>
+        <div class="num-skin JS-num-big-set" align=center> <span class=JS-num-big-val id=statspage></span> </div>
+        <div id=main-left-current>当前网站</div>
+    </div>
+    <div id=main-right>
+        <div class="num-skin JS-num-set" align=center id=right-js-num> <span class=JS-num-val id=statsTotal></span> </div>
+        <div id=main-right-current>累计拦截</div>
+    </div>
+</div>
+<div class=footer>
+    <div id=footer-left-OptionsButton align=center>
+        设置
+    </div>
+    <div id=footer-right align=center>
+        过滤日志
+    </div>
+</div>
+<script src="i18n.js"></script>
+<script src="../i18n-helper.js"></script>
+</body>

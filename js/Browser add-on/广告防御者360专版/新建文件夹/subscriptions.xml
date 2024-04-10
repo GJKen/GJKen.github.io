@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<subscriptions>
+  <subscription>
+	  <title><![CDATA[yiclear核心规则]]></title>
+	  <specialization><![CDATA[ChinaList+EasyList]]></specialization>
+	  <url><![CDATA[local/ChinaList2.0.txt]]></url>
+	  <homepage><![CDATA[http://www.yiclear.com]]></homepage>
+	  <prefixes><![CDATA[zh]]></prefixes>
+	  <author><![CDATA[yiclear]]></author>
+	  <version><![CDATA[20170310000]]></version>
+  </subscription>
+</subscriptions>

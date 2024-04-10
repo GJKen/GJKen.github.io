@@ -1,0 +1,7 @@
+http://www.4399.com/flash/
+http://www.4399.com/
+###bestposition > CENTER:last-child
+##.bg01
+###loadingDiv
+##.view
+###PlayIframe > IFRAME

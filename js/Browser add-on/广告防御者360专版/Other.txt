@@ -1,0 +1,19 @@
+##.centered
+##.banner
+133ht.com##.top_box
+bbbmm6.win##.pure-img
+bxdac.com##DIV.header:nth-child(3) > DIV.zc_gg:nth-child(3) > A > IMG.lazy
+bxdac.com##DIV.header:nth-child(3) > DIV.yc_gg:last-child > A > IMG.lazy
+bxdac.com##DIV.head_gg.head_1.container:nth-child(4) > A > IMG.lazy
+bxdac.com##DIV.head_gg.head_2.container:nth-child(5) > A > IMG.lazy
+bxdac.com##DIV.top_gg.container:nth-child(2) > A > IMG.lazy
+bxdac.com##DIV.head_gg.head_2.container:nth-child(19) > A > IMG.lazy
+bxdac.com##DIV.footer:nth-child(21) > DIV.container > DIV.ft_gg:nth-child(2)
+bxdac.com###gotoimage > A > IMG.lazy
+bxdac.com##.head_gg.head_2.container
+bxdac.com##.head_gg.head_1.container
+bxdac.com##.g_g
+bxdac.com##.ft_gg
+bxdac.com##.d_l
+bxdac.com##.yc_nr
+pornhub.com##.premiumPromoBannerImage
