@@ -17,9 +17,9 @@
 }
 
 body {
-	width: 2560;
-	font-size: 17px;
-	font-weight: bolder;
+	font-size: 20px;
+	font-weight: 250;
+	letter-spacing: 2px;
 	background: #a18e7c;
 	overflow: hidden;
 	font-family: Arial, Microsoft YaHei, sans-serif !important;
@@ -84,7 +84,7 @@ a {
 	margin-top: 10px;
 }
 
-#miandiv {
+#maindiv {
 	position: relative;
 	margin: 5;
 	padding: 10 10 0 10;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>test motd</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <link rel="stylesheet" href="./src/caihua.css" type="text/css"/> -->
+		<style>
+			* {margin: 0;padding: 0;}
+			html,body{height: 100%;width: 100%;}
+			body{
+				background-image: -webkit-linear-gradient(top, #ffcc33, #ff66cc); /* Chrome, Safari */
+				background-image: -moz-linear-gradient(top, #ffcc33, #ff66cc); /* Firefox */
+				background-image: -o-linear-gradient(top, #ffcc33, #ff66cc); /* Opera */
+				background-image: linear-gradient(to bottom, #ffcc33, #ff66cc); /* 标准语法 */
+				background-size: cover;
+			}
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 20px;
+				background: #ff5500;
+				border-radius: 10px;
+				background: rgba(61, 145, 255, 0.3);
+			}
+			::-webkit-scrollbar-thumb {
+				background: darkcyan;
+				border-radius: 10px;
+			}
+			#btn{
+				background: rgba(67, 140, 191, .40);
+			}
+			#setudiv{
+				position: absolute;
+				top: 20px;
+				left: 90%;
+			}
+			#inner{
+				margin: auto;
+				padding: 20px;
+				font-weight: 400;
+				color: #fff;
+				letter-spacing: 0.1rem;
+				word-spacing: 1rem;
+				background-color: #0c0c0c;
+				opacity: 0.7;
+			}
+		</style>
+	 </head>
+	 <body onclick="showmaindiv()">
+		<div id="main" >
+			<div id="bg"></div>
+<!-- 			<div id="btn">
+				<button id="btn1" class="btnStyle" href="#" onclick="hideOrShowImage()">❀隐藏❀</button>
+				<button id="btn2" class="btnStyle" href="#" onclick="changeImage()">❀不要按❀</button>
+			</div> -->
+			<div style="visibility:visible">
+				<div id="inner">
+					<div style="margin: 0 0 20px 0;">
+						<button id="btn3"  class="btnSty" onclick="changeContent(0)">公告2</button>
+						<button id="btn4"  class="btnSty" onclick="changeContent(1)">说明</button>
+						<button id="btn5"  class="btnSty" onclick="changeContent(2)">指令</button>
+					</div>
+					<div id="setudiv">
+						<button id="btn4" onclick="hidemaindiv()">隐藏</button>
+						<button id="RS" onclick="ReplaceCmds(0,1)"><span>❤</span>色图<span>❤</span></button>
+					</div>
+					<div id="inner2">
+						<div id="part0">
+							<p>oopz频道: <span>https://oopz.cn/i/Zd9NYN</span></p>
+						</div>
+						<div id="part1">
+							<p>投票: <span>!v</span>, 开启各项服务器自定义投票内容</p>
+						</div>
+						<div id="part2">
+							<p><span>铲子</span>增加砍舌效果</p>
+						</div>
+						<div id="part3">
+							<p class="vote1">服务器配置</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./src/test.js"></script>
+</html>
